@@ -15,12 +15,13 @@
     padding: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
     .head{
         width: 100%;
-        height: 10vh;
+        height: auto;
     }
     .head h1{
         font-size: 25px;
@@ -43,7 +44,7 @@
 
 .main{
     width: 100%;
-    height: 70vh;
+    height: auto;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -53,6 +54,7 @@
     width: 70%;
     height: 80%;
     background-color: orange;
+    margin: 10px;
 }
 .main div > h2{
     font-size: 35px;
@@ -112,6 +114,24 @@
         padding: 5px;
     }
 }
+
+/* //////////////////////////////////////////////////////////////// */
+
+
+.game-menu{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-menu > div {
+    width: 100%;
+    height: 90%;
+    margin: 10px;
+    text-align: center;
+}
+
 
 /* //////////////////////////////////////////////////////////// */
 
