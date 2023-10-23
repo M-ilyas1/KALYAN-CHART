@@ -289,6 +289,8 @@
         height: 90%;
     }
     .update-time-table{
+        width: 100%;
+        height: auto;
         display: block;
         justify-content: space-evenly;
         align-items: center;
