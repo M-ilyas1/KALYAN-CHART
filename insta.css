@@ -4,7 +4,7 @@
 }
 .head{
     width: 100%;
-    height: 15vh;
+    height: auto;
     background-color: orangered;
     display: flex;
     justify-content: center;
@@ -12,6 +12,7 @@
 }
 .head h1{
     font-size: 50px;
+    padding: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
@@ -26,6 +27,17 @@
     }
 }
 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .head{
+        width: 100%;
+        height: auto;
+    }
+    .head h1{
+        padding: 10px;
+        font-size: 30px;
+    }
+}
+
 /* //////////////////////////////////////////////////////////// */
 
 
@@ -36,7 +48,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid orange;
 }
 .main div{
     width: 70%;
@@ -75,6 +86,28 @@
     }
     .main div > p{
         font-size: 9px;
+        letter-spacing: 1px;
+        line-height: 15px;
+        padding: 5px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .main{
+        width: 100%;
+        height: auto;
+    }
+    .main div{
+        width: 70%;
+        height: 90%;
+        background-color: orange;
+        margin: 10px;
+    }
+    .main div > h2{
+        font-size: 25px;
+        padding-top: 10px;
+    }
+    .main div > p{
+        font-size: 15px;
         letter-spacing: 1px;
         line-height: 15px;
         padding: 5px;
@@ -148,7 +181,30 @@
 
         font-family: Arial, Helvetica, sans-serif;
     }
-    
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .card{
+        width: 100%;
+        height: 40vh;
+    }
+    .main-card{
+        width: 100%;
+        height: 50%;
+    }
+    .main-card > div{
+        width: auto;
+        height: auto;
+        border-radius: 10%;
+        border: 2px solid blue;
+    }
+    .main-card > div > a{
+        text-decoration: none;
+        color: blue;
+    }
+    .main-card > div > a > h2{
+        padding: 5px;
+        font-size: 20px;
+    }
 }
 
 /* //////////////////////////////////////////////////////////// */
@@ -202,7 +258,30 @@
         font-size: 15px;
         color: white;
     }
-
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .Refresh-card{
+        width: 100%;
+        height: auto;
+        padding: 5px;
+    }   
+    .Refresh-card > div{
+        padding: 15px;
+    }
+    .Refresh-card > div > button{
+        background-color: orangered;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    .Refresh-card > div > button a{
+        text-decoration: none;
+    }
+    .Refresh-card > div > button h2{
+        padding-top: 3px;
+        font-size: 23px;
+        color: white;
+    }
 }
 /* //////////////////////////////////////////////////////////////// */
 
@@ -251,7 +330,22 @@
         padding: 5px;
     }
 }
-
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .result-menu{
+        width: 100%;
+        height: 35vh;
+    }   
+    .result-menu > div{
+        width: 80%;
+        height: 60%;
+    }
+    .result-menu > div h3{
+        font-size: 30px;
+    }
+    .result-menu > div h4{
+        font-size: 30px;
+    }
+}
 /* ////////////////////////////////////////////////////////////// */
 
 .update-time{
@@ -338,7 +432,24 @@
         font-size: 13px;
     }
 }
-
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .end-box{
+        width: 100%;
+        height: auto;
+    }
+    .end-box > div{
+        width: 90%;
+        height: 90%;
+        border-radius: 10px;
+        border: 2px solid orangered;
+    }
+    .end-box > div p{
+        font-size: 18px;
+    }
+    .end-box > div li{
+        font-size: 19px;
+    }
+}
 /* //////////////////////////////////////////////////////////// */
 
 footer{
