@@ -1,0 +1,168 @@
+.RECORD {
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    font-style: italic;
+    font-size: large;
+    border-width: 5px;
+    border-color: #893bff;
+    border-style: groove;
+    text-shadow: 1px 1px #ffd700;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+@media screen and (min-width: 500px)
+/* Desktop */
+
+{
+    table {
+        text-align: center;
+        border-collapse: separate;
+    }
+    th {
+        font-size: 12px;
+        padding: 5px 3px
+    }
+    td {
+        font-size: x-large;
+        padding: 5px 3px
+    }
+}
+
+@media screen and (max-width: 500px)
+/* Tablet */
+
+{
+    table {
+        max-width: 110%;
+        min-width: 60%;
+        text-align: center;
+        border-collapse: separate;
+    }
+    th {
+        font-size: 8px;
+        padding: 4px 1px
+    }
+    td {
+        font-size: 3;
+        padding: 4px 1px
+    }
+}
+
+@media screen and (max-width: 320px)
+/* mobile */
+
+{
+    table {
+        max-width: 110%;
+        min-width: 60%;
+        text-align: center;
+        border-collapse: separate;
+    }
+    th {
+        font-size: 7px;
+        padding: 3px 1px
+    }
+    td {
+        font-size: 2;
+        padding: 3px 1px
+    }
+}
+.counter {background-color:white; color:black; border-width: 3px; border-color:brown; border-style: solid;  margin-top: 4px; margin-bottom: 4px; margin-left: 2px; margin-right: 2px; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; font-weight: bold; text-decoration: none; font-size: large; font-style: bold;}
+            .headline4 {background-color: #e6e6e6; color: black; border: 4px groove brown; margin-top: 4px; margin-bottom: 4px; margin-left: 2px; margin-right: 2px; padding-top: 2px; padding-bottom: 2px; padding-left: 2px; padding-right: 2apx;}
+            .o2cheadline {border:2px solid#808000 ;background:red;margin:5px;padding:1px;}
+            .res {background-color:yellow; color: black; font-weight: bold; font-style: italic; font-size: xx-large; text-decoration: none; text-align: center;}
+            .mac {background-color: white; color: black; border-width: 5px; border-color: brown; border-style: solid; margin-top: 10px; margin-bottom: 10px; margin-left: 1px; margin-right: 1px; padding-top: 10px; padding-bottom: 0px; padding-left: 1px; padding-right: 1px; font-weight: bold; font-style: italic; font-size: 25px; font-family: Georgia, Times New Roman, Times, serif; text-shadow: 1px 1px white;border-radius:0px;}
+            a {text-decoration:none; font-weight:bold; color:#0000cc;}
+            .uper { background-color: #330000; color: white; border-width: 3px; border-color: red; border-style: solid;  margin-top: 2px; margin-bottom: 2px; margin-left: 0px; margin-right: 0px; padding-top: 6px; padding-bottom: 6px; padding-left: 2px; padding-right: 2px; font-weight: bold; text-decoration: none; font-size: large; font-style: italic; }
+            .iner { background-color: white; color: black; border-width: 3px; border-color: red; border-style: solid;  margin-top: 2px; margin-bottom: 2px; margin-left: 0px; margin-right: 0px; padding-top: 10px; padding-bottom: 10px; padding-left: 2px; padding-right: 2px; font-weight: bold; text-decoration: none; font-size: large; font-style: italic; }
+            .top1_heding{width:100%;background-color:#623D08;border-width: 3px; border-color: #FF9500; border-style: solid;text-align:center;font-size:18px;font-style:bold;color:white;font-family:"Times New Roman",Times,serif;font-weight:bold;line-height:1.3em;margin-top:0px;padding-top:10px;padding-bottom:10px;border-radius: 1px;margin-top: 2px; margin-bottom: 2px}
+            .io{background-color: pink; color: black; border-width: 2px; border-color: blue; border-style: dotted; margin-top: 2px; margin-bottom: 2px; margin-left: 2px; margin-right: 2px; padding-top: 2px; padding-bottom: 10px; padding-left: 2px; padding-right: 2px; font-weight: bold; font-style: italic; font-size: large; text-decoration: blink;}
+            .hhh { background-color: #7B14BB; color: white; font-weight: bold; font-style: italic; font-size: x-large; border-width: 3px; border-color: blue; border-style: groove;}
+            .HEADER { background-color: black; color: mintcream; border-width: 2px; border-color: red; border-style: dotted; margin-top: 2px; margin-bottom: 2px; margin-left: 2px; margin-right: 2px; padding-top: 2px; padding-bottom: 10px; padding-left: 2px; padding-right: 2px; font-weight: bold; font-style: italic; font-size: large; text-decoration: blink; }
+            .undertaker{ background-color: #6A0888; color: yellow; font-size: 15px;font-family: TIMES NEW ROMAN; border-width: 2px; border-color: blue; border-style: outset; border-radius: 0px; font-weight: bold; margin-top: 0px; margin-bottom: 0px; font-style: bold; padding-top: 10px; padding-bottom: 10px; padding-left: 3px; padding-right: 2px;text-shadow: 1px 1px #48006C;}
+            khatri{background-color:#59208F;border-color:#FFE2C5;border-radius:3px;border-style:solid;border-width:2px;color:white;font-size:large;font-weight:700;margin:1px;padding:10px;text-align:center;text-decoration:none}.HEADLINES2 {color: white; font-weight: bold; font-style: italic; font-size: large; text-decoration: blink; }.lines { background-color: WHITE; color: ORANGE; font-weight: bold; font-style: italic; font-size: large; text-decoration: none; border-width: 5px; border-color: blue; border-style: double; margin-top: 5px; margin-bottom: 5px;margin-left: 5px; margin-right: 5px; padding-top: 15px; padding-bottom: 15px; padding-left: 8px; padding-right: 8px; border-radius: 9px; }.play { background-color: black; color: ORANGE; font-weight: bold; font-style: italic; font-size: large; text-decoration: none; border-width: 5px; border-color: blue; border-style: double; margin-top: 5px; margin-bottom: 5px;margin-left: 5px; margin-right: 5px; padding-top: 15px; padding-bottom: 15px; padding-left: 8px; padding-right: 8px; border-radius: 9px; }
+            .out { background-color: WHITE; color: ORANGE; font-weight: bold; font-style: italic; font-size: large; text-decoration: none; border-width: 5px; border-color: blue; border-style: double; margin-top: 0px; margin-bottom: 5px;margin-left: 5px; margin-right: 5px; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; border-radius: 9px; }.rko { background-color:yellow;border-width: 4px;border-color:blue;border-style: outset ; border-radius: 10px;margin-top:4px;margin-bottom: 4px;margin-left: 1px;margin-right:1px;padding-top:4px;padding-bottom: 4px;padding-left:4px;padding-right:4px;font-weight:bold;font-style: italic;font-size: large;text-decoration: blink;color:black;}.charts { background-color: gold; color: red; border-width: 4px; border-color: blue; border-style: solid; margin-top: 1px; font-weight: bold; font-style: italic; font-size: large; padding-top: 8px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px; border-radius: 5px; font-family: monospace; text-shadow: 1px 1px pink; }.time-table { background-color: blue; color: white; border-width: 4px; border-color: white; border-style: solid; margin-top: 5px; margin-bottom: 5px; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; font-weight: bold; font-style: italic; font-size: large; text-decoration: blink; border-radius: 10px;font-family: Georgia;} blue{background-color:white;color:blue;font-size:large;border-width:3px;border-color:#59208F;border-style:solid;font-weight:bold;margin-top:10px;margin-bottom:10px;font-style:italic;padding-top:5px;padding-bottom:5px;padding-left:5px;padding-right:5px;border-radius:4px;}.satta_2 {background-color: yellow;border-color: white;border-radius: 10px;border-style: inset;border-width: 3px;color: #ff0000;font-size: large;font-style: italic;font-weight: bold;margin: 4px;padding: 4px;text-decoration: blink;}
+            .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    text-align:center;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+.modal-body input[type=text]{
+    border: 3px double black; border-radius: 5px 5px 5px 5px; background-color: #EDC9AF; font-size: 18px; color: #4B0082;text-align:center;
+}
+.modal-body input[type=submit]{
+    border: 3px solid black; border-radius: 5px 5px 5px 5px; background-color: #E56717; font-size: 18px; color: #4B0082;
+}
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    text-align:center;
+    color: white;
+}
+.blog{text-decoration:blink;font-weight:700;font-style:italic;text-align:center;background-color:#fff;color:#000;border-style:groove;margin-top:7px;margin-bottom:7px;border-top:2px solid #FF0040;border-bottom:2px solid #FF0040;border-left:5px solid #FF0040;border-right:5px solid #FF0040;font-size:large;padding:7px;border-radius:8px;}
+.blog .title{font-size:22px;font-weight:bold;}
+.blog .txtright{text-align:right;color:#2748AB; font-size:16px;}
+.blog .body{font-size:16px;text-decoration:none;}
+.blog .footer{background-color:#25AB6C;color:#FFFFFF;font-size:25px;text-align:center;}
+.blog .footer a{text-decoration:none;color:#FFFFFF;}
+            .horizontally { height: 50px;   overflow: hidden; position: relative; background: yellow; color: orange; border: 1px solid orange; } .horizontally p { position: absolute; width: 100%; height: 100%; margin: 0; line-height: 50px; text-align: center;
+        

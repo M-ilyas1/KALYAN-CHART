@@ -1,0 +1,380 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.head{
+    width: 100%;
+    height: 15vh;
+    background-color: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head h1{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .head{
+        width: 100%;
+        height: 10vh;
+    }
+    .head h1{
+        font-size: 25px;
+    }
+}
+
+/* //////////////////////////////////////////////////////////// */
+
+
+.main{
+    width: 100%;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid orange;
+}
+.main div{
+    width: 70%;
+    height: 80%;
+    background-color: orange;
+}
+.main div > h2{
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    text-overflow: hidden !important;
+}
+.main div > p{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 30px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .main{
+        width: 100%;
+        height: auto;
+    }
+    .main div{
+        width: 70%;
+        height: 90%;
+        background-color: orange;
+    }
+    .main div > h2{
+        font-size: 20px;
+        padding-top: 10px;
+    }
+    .main div > p{
+        font-size: 9px;
+        letter-spacing: 1px;
+        line-height: 15px;
+        padding: 5px;
+    }
+}
+
+/* //////////////////////////////////////////////////////////// */
+
+
+.card{
+    width: 100%;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient( orangered 0deg 90deg, green 90deg 270deg, orangered 270deg);
+}
+.main-card{
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 5px solid green;
+    border-bottom: 5px solid orangered;
+}
+.main-card > div{
+    width: 12%;
+    height: 70%;
+    border-radius: 100%;
+    border: 5px solid blue;
+    text-align: center;
+}
+.main-card > div > a{
+    text-decoration: none;
+    color: blue;
+}
+.main-card > div > a > h2{
+    padding-top: 14px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@media screen and (max-width: 768px) {
+    .card{
+        width: 100%;
+        height: 40vh;
+    }
+    .main-card{
+        width: 100%;
+        height: 50%;
+        border-top: 2px solid green;
+        border-bottom: 2px solid orangered;
+    }
+    .main-card > div{
+        width: auto;
+        height: auto;
+        border-radius: 20%;
+        border: 2px solid blue;
+    }
+    .main-card > div > a{
+        text-decoration: none;
+        color: blue;
+    }
+    .main-card > div > a > h2{
+        padding: 5px;
+        font-size: 11px;
+
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+}
+
+/* //////////////////////////////////////////////////////////// */
+
+.Refresh-card{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+.Refresh-card > div{
+    width: 20%;
+    height: 50%;
+}
+.Refresh-card > div > button{
+    background-color: orangered;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+}
+.Refresh-card > div > button a{
+    text-decoration: none;
+}
+.Refresh-card > div > button h2{
+    font-size: 35px;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .Refresh-card{
+        width: 100%;
+        height: auto;
+        padding: 5px;
+    }   
+    .Refresh-card > div{
+        padding: 5px;
+    }
+    .Refresh-card > div > button{
+        background-color: orangered;
+        width: 100%;
+        height: 100%;
+    }
+    .Refresh-card > div > button a{
+        text-decoration: none;
+    }
+    .Refresh-card > div > button h2{
+        padding-top: 3px;
+        font-size: 15px;
+        color: white;
+    }
+
+}
+/* //////////////////////////////////////////////////////////////// */
+
+.result-menu{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+.result-menu > div{
+    width: 80%;
+    height: 50%;
+    color: white;
+    text-align: center;
+}
+.result-menu > div h3{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: orangered;
+    padding: 10px;
+   
+}
+.result-menu > div h4{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .result-menu{
+        width: 100%;
+        height: 27vh;
+    }   
+    .result-menu > div{
+        width: 80%;
+        height: 80%;
+    }
+    .result-menu > div h3{
+        font-size: 15px;
+    }
+    .result-menu > div h4{
+        font-size: 18px;
+        padding: 5px;
+    }
+}
+
+/* ////////////////////////////////////////////////////////////// */
+
+.update-time{
+    width: 100%;
+    height: 83vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+.update-time > div{
+    width: 90%;
+    height: 90%;
+    text-align: center;
+}
+.update-time-title{
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 18px;
+    padding-top: 20px;
+    line-height: 40px;
+}
+.update-time-table{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .update-time{
+        width: 100%;
+        height: auto;
+    }   
+    .update-time > div{
+        width: 90%;
+        height: 90%;
+    }
+    .update-time-table{
+        display: block;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+/* ////////////////////////////////////////////////////////// */
+
+
+.end-box{
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.end-box > div{
+    width: 90%;
+    height: 90%;
+    background-color: orange;
+    color: black;
+    border-radius: 10px;
+    border: 5px solid orangered;
+}
+.end-box > div p{
+    text-align: center;
+    padding: 30px 30px 0px 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .end-box{
+        width: 100%;
+        height: auto;
+    }
+    .end-box > div{
+        width: 90%;
+        height: 90%;
+        border-radius: 10px;
+        border: 2px solid orangered;
+    }
+    .end-box > div p{
+        font-size: 13px;
+    }
+    .end-box > div li{
+        font-size: 13px;
+    }
+}
+
+/* //////////////////////////////////////////////////////////// */
+
+footer{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer > div{
+    width: 100%;
+    height: 100%;
+    background-color: orangered;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer > div{
+        width: 100%;
+        height: 100%;
+        background-color: orangered;
+        text-align: center;
+        color: white;
+        padding: 10px;
+    }
+    footer > div h3{
+        font-size: 15px;
+    }
+    footer > div p{
+        font-size: 10px;
+    }
+}
