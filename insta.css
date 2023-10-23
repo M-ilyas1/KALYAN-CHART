@@ -76,9 +76,8 @@
         height: auto;
     }
     .main div{
-        width: 70%;
+        width: 90%;
         height: 90%;
-        background-color: orange;
     }
     .main div > h2{
         font-size: 20px;
@@ -243,10 +242,13 @@
         padding: 5px;
     }   
     .Refresh-card > div{
-        padding: 5px;
+        width: 60%;
+        height: 10%;
+        border-radius: 10%;
     }
     .Refresh-card > div > button{
-        background-color: orangered;
+        border-radius: 5%;
+        padding: 5px 10px;
         width: 100%;
         height: 100%;
     }
@@ -372,7 +374,15 @@
     justify-content: space-evenly;
     align-items: center;
 }
-
+@media screen and (max-width: 320px) {
+    .update-time-table{
+        width: 30%;
+        height: auto;
+        display: block;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
 @media screen and (max-width: 768px) {
     .update-time{
         width: 100%;
