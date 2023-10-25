@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Milan Night Chart</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+        <style type="text/css">
+            html {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+            }
+            body { background:  ; 
+            color: ; 
+            }
+            a { color: ; 
+            }
+        </style>
+        <style>
+            body { 
+            background-color: #3b5998; 
+            color: #FFFFFF; 
+            margin:0px;
+            }
+            a { color: #FF0000; 
+            }
+            h1 {
+            font-family: 'Monoton', cursive;
+            font-size: 40px;
+            }
+            @media screen and (min-device-width: 320px) and (max-device-width: 768px) { 
+            .width50{
+            width: 100% !important;
+            }
+            }
+            h1{color: #fff;-webkit-animation: h1 8s infinite; animation: h1 8s infinite;}
+            /* Chrome, Safari, Opera */
+            @-webkit-keyframes h1 {
+            0%   {text-shadow: 0 0 3px #FF0000; color: #fff;}
+            25%  {text-shadow: 0 0 12px #FF0000;}
+            50%  {text-shadow: 0 0 20px #FF0000; color: pink;}
+            75%  {text-shadow: 0 0 12px #FF0000;}
+            100% {text-shadow: 0 0 3px #FF0000; color: #fff;}
+            } 
+            h2 {
+            font-family: 'Monoton', cursive;
+            font-size: 30px;
+            -webkit-animation: h2 0.35s infinite; 
+            animation: h2 0.35s infinite;
+            }
+            @-webkit-keyframes h2 {
+            0%   {text-shadow: 0 0 6px #FFF;}
+            100%  {text-shadow: 0 0 0px #000;}
+            }
+            input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            }
+            input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+            input[type=submit]:hover {
+            background-color: #45a049;
+            }
+            form{
+            text-align: start;
+            font-size: 20px;
+            color: white;
+            }
+            .width50{
+            width: 50%;
+            }
+            .gray-gradiant{
+            background: linear-gradient(white, #D3D8E8);
+            }
+            .entry-text{
+            width: 70%;
+            border-radius: 10px;
+            padding: 35px 10px;
+            color: black;
+            }
+            #customers {
+            border-collapse: collapse;
+            width: 100%;
+            }
+            #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            }
+            #customers tr:nth-child(even){background-color: #f2f2f2;}
+            #customers tr:hover {background-color: #ddd;}
+            #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+            }
+            @media screen and (min-device-width: 320px) and (max-device-width: 480px) { 
+            h1 {
+            font-family: 'Monoton', cursive;
+            font-size: 25px;
+            }
+            h2 {
+            font-family: 'Monoton', cursive;
+            font-size: 16px;
+            }
+            }
+            body {background-color:#000;border-width: 4px; border-color: red; border-style: solid; font-family:Verdana, Geneva, sans-serif; margin:0; padding:5px;font-size:16px; color:#fff;}
+            link1-table{border: 1px solid #f00; background: #f5f5f5;     max-width: 1px;
+            font-family: Georgia, serif;
+            font-weight: bold;  
+            margin:5px;
+            color: #333;}
+            .tablegapb{padding-top:10px;}
+            .title-head{text-align: center; text-transform: capitalize;line-height: 30px;
+            font-weight: bold; font-size: 30px; font-style: Bold; padding-bottom: 10px;}
+            .bigtext{
+            font-size: x-large;
+            font-weight: bold;
+            background: brown;
+            color: #fff;
+            }
+            .link1-table td {
+            padding: 5px;
+            }
+            .rka { background-color:yellow;border-width: 4px;border-color:blue;border-style: outset ; border-radius: 10px;margin-top:4px;margin-bottom: 4px;margin-left: 1px;margin-right:1px;padding-top:4px;padding-bottom: 4px;padding-left:4px;padding-right:4px;font-weight:bold;font-style: italic;font-size: large;text-decoration: blink;color:black;}
+            .khatri{background-color:white;border-color:black;border-radius:3px;border-style:solid;border-width:2px;color:black;font-size:large;font-weight:700;margin:1px;padding:10px;text-align:center;text-decoration:none}
+        </style>
+        <style> 
+            .ion{background-color:white; color: red; border-width: 2px; border-color: blue; border-style: dotted; margin-top: 2px; margin-bottom: 2px; margin-left: 2px; margin-right: 2px; padding-top: 2px; padding-bottom: 10px; padding-left: 2px; padding-right: 2px; font-weight: bold; font-style: italic; font-size: large; text-decoration: blink;text-align: center;} 
+            .iom{background-color:yellow; color: red; border-width: 2px; border-color: blue; border-style: dotted; margin-top: 2px; margin-bottom: 2px; margin-left: 2px; margin-right: 2px; padding-top: 2px; padding-bottom: 10px; padding-left: 2px; padding-right: 2px; font-weight: bold; font-style: italic; font-size: large; text-decoration: blink;} 
+            .io1{background-color: #06C571; color: black; border-width: 2px; border-color: blue; border-style: dotted; margin-top: 2px; margin-bottom: 2px; margin-left: 2px; margin-right: 2px; padding-top: 2px; padding-bottom: 10px; padding-left: 2px; padding-right: 2px; font-weight: bold; font-style: italic; font-size: large; text-decoration: blink;}
+            .io2{background-color: #F0F178; color: black; border-width: 2px; border-color: blue; border-style: dotted; margin-top: 2px; margin-bottom: 2px; margin-left: 2px; margin-right: 2px; padding-top: 2px; padding-bottom: 10px; padding-left: 2px; padding-right: 2px; font-weight: bold; font-style: italic; font-size: large; text-decoration: blink;}
+            .io3{background-color: #E9ACF0; color: black; border-width: 2px; border-color: blue; border-style: dotted; margin-top: 2px; margin-bottom: 2px; margin-left: 2px; margin-right: 2px; padding-top: 2px; padding-bottom: 10px; padding-left: 2px; padding-right: 2px; font-weight: bold; font-style: italic; font-size: large; text-decoration: blink;}
+            .io4{background-color: white; color: black; border-width: 2px; border-color: blue; border-style: dotted; margin-top: 2px; margin-bottom: 2px; margin-left: 2px; margin-right: 2px; padding-top: 2px; padding-bottom: 10px; padding-left: 2px; padding-right: 2px; font-weight: bold; font-style: italic; font-size: large; text-decoration: blink;}
+            button{border: 3px solid black; border-radius: 5px 5px 5px 5px; background-color: #E56717; font-size: 18px; color: #4B0082;}
+            .link1-table{border: 1px solid #f00; background: #f5f5f5;     max-width: 1px;
+            font-family: Georgia, serif;
+            font-weight: bold;  
+            margin:5px;
+            color: #333;}
+            .tablegapb{padding-top:10px;}
+            .title-head{text-align: center; text-transform: capitalize;line-height: 30px;
+            font-weight: bold; font-size: 30px; font-style: Bold; padding-bottom: 10px;}
+            .bigtext{
+            font-size: x-large;
+            font-weight: bold;
+            background: brown;
+            color: #fff;
+            }
+            .link1-table td {
+            padding: 5px;
+            }
+            .rka { background-color:yellow;border-width: 4px;border-color:blue;border-style: outset ; border-radius: 10px;margin-top:4px;margin-bottom: 4px;margin-left: 1px;margin-right:1px;padding-top:4px;padding-bottom: 4px;padding-left:4px;padding-right:4px;font-weight:bold;font-style: italic;font-size: large;text-decoration: blink;color:black;}
+            .khatri{background-color:white;border-color:black;border-radius:3px;border-style:solid;border-width:2px;color:black;font-size:large;font-weight:700;margin:1px;padding:10px;text-align:center;text-decoration:none}
+            .bg-color11 {
+            background-color: #ffd700!important;
+            border-color: #ffd700!important;
+            }
+            .info {
+            margin: 10px auto;
+            padding: 5px 10px 0px;
+            text-align: center;
+            border: 2px solid;
+            border-radius: 10px 0px;
+            background: #1f2251;
+            }
+            .bg-color4 {
+            background-color: #8be45e!important;
+            border-color: #8be45e!important;
+            }
+            .card-pricing {
+            text-align: center;
+            color: black;
+            }
+            .card {
+            background: #1f2251;
+            border: 0;
+            margin: auto;
+            position: relative;
+            width: 100%;
+            box-shadow: 0 1px 20px 0 rgba(0, 0, 0, .1);
+            border-radius: 7px;
+            margin-top: 10px;
+            }
+            .card {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            font-size: 20px;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: .0625rem solid rgba(34, 42, 66, .05);
+            border-radius: .2857rem;
+            }
+            .card h1, .card h2, .card h3, .card h4, .card h5, .card h6, .card p, h1, h2, h3, h4, h5, h6 {
+            color: #fff;
+            }
+            .card-category, .category {
+            text-transform: capitalize;
+            font-weight: 400;
+            color: #000 !important;
+            font-size: 16px;
+            margin: 10px
+            }
+            .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+            margin-bottom: .5rem;
+            font-family: inherit;
+            }
+            .card-pricing ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px auto;
+            }
+            .card-pricing ul li {
+            text-align: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(52, 70, 117, .3);
+            }
+        </style>   
+</head>
+    <body>
+        <div class="uper" align="center">
+            <div class="g" align="center">
+                <div style=" padding: 10px 10px;background-color: orangered;">
+                    <font size="5">
+                    <h1><a href="https://thekalyanchart.com/" title="CHARTKALYAN" style="display: block;margin-top: 13px;margin-bottom: 13px; color: white;">
+                    thekalyanchart.com</a>
+                    </h1>
+                    </font>
+					<div style='font-size:15px;'><h2>thekalyanchart.com </h2></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-danger p-2 m-2 text-center" role="dialog" aria-label="Information Dialog">
+            <p class="pt-2" >
+              <a href="./rajdhani-night-chart.html"><span role="text" class="text-primary">rajdhani-night-chart</span></a> | 
+              <a href="./milan-night-chart.html"><span role="text" class="text-primary">Milan Night Chart</span></a> | 
+              <a href="./main-bazar-chart.html"><span role="text" class="text-primary">Main bazar Chart</span></a> | 
+              <a href="./milan-day-panel-chart.html"><span role="text" class="text-primary">Milan Day Panel Chart</span></a> | 
+              <a href=""><span role="text" class="text-primary">Milan night panel Chart</span></a> | 
+              <a href=""><span role="text" class="text-primary">Rajdhani night panel Chart</span></a> | 
+              <a href=""><span role="text" class="text-primary">Rajdhani Day Panel Chart</span></a></p>
+          </div>
+
+        <style type="text/css">
+    .td_new {        
+        font-size: medium;
+        padding: 5px 5px;
+        border-width: 2px;
+        /*text-shadow: 1px 1px 1px black;*/
+        text-shadow: none;
+    }
+
+    
+
+    .table_css {
+        background-color: #fff;
+        color: #000;
+        font-weight: 700;
+        /*font-style: italic;*/
+        border-width: 2px;
+        border-color: black;
+        border-style: groove;
+        text-shadow: 1px 1px #ffd700;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-collapse: collapse;
+        text-align: center;
+        align-content: center;
+    }
+
+    
+
+    .center_table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .border_c{
+        border: 2px solid black;
+    }
+
+    .bg-danger{
+        background-color: red;
+        /*color: white;*/
+    }
+
+    .th_font{
+        font-size: 16px;
+        text-shadow: none;
+        padding: 5px 5px;
+        border-width: 2px;
+        background-color: #7FFFD4;
+    }
+
+    .row_class{
+        /*background-color: #f3ed24;*/
+        background-color: beige;
+        padding: 15px;
+        /*border: 9px double #4347b7;*/
+    }
+
+    .hadding_class{
+        color: white;
+        text-align: center;
+        padding: 8px !important;
+        margin: 0px;    
+        font-size: 16px;            
+    }
+
+    .space_class{
+        padding-right: 9px;
+        padding-left: 9px;
+    }   
+
+    .space_c{
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+
+
+
+   @media screen and (min-width: 376px) and (max-width: 444px) { 
+        .space_class{
+            padding-right: 6px !important;
+            padding-left: 6px !important;
+        }
+
+        .space_c{
+            padding-right: 2px !important;
+            padding-left: 2px !important;
+        }
+
+        .td_new {        
+            font-size: 13.2px;
+            padding: 0px;
+            margin: 0px;
+            border-width: 1px;
+            /*padding: 5px 5px;*/
+            /*border-width: 2px;*/
+            /*text-shadow: 1px 1px 1px black;*/
+            text-shadow: none;
+        }
+        .th_font{
+            padding: 0px;
+            margin: 0px;
+           /* font-size: 13.2px;*/
+            font-size: 10.9px;
+            text-shadow: none;
+            border-width: 1px;
+
+            /*padding: 5px 5px;*/   
+            /*border-width: 2px;*/
+        }
+
+        .row_class{
+            background-color: beige;
+           /* border: 9px double #4347b7;*/
+            padding: 0px;
+        }
+
+        .hadding_class{
+            color: white;
+            text-align: center;
+            padding: 8px !important;
+            margin: 0px;    
+            font-size: 12px;                     
+        }
+
+        .date_class{
+            font-size:14px;
+        }
+
+        .mtop20{
+            margin-top: 0px;
+        }
+    }
+
+    @media screen and (min-width: 321px) and (max-width: 375px) {
+        .space_class{
+            padding-right: 6px !important;
+            padding-left: 6px !important;
+        }
+
+        .space_c{
+            padding-right: 2px !important;
+            padding-left: 2px !important;
+        }
+
+        .td_new {        
+            font-size: 12.2px;
+            padding: 0px;
+            margin: 0px;
+            border-width: 1px;
+            /*padding: 5px 5px;*/
+            /*border-width: 2px;*/
+            /*text-shadow: 1px 1px 1px black;*/
+            text-shadow: none;
+        }
+        .th_font{
+            padding: 0px;
+            margin: 0px;
+            /*font-size: 11.2px;*/
+            font-size: 9.2px;
+            text-shadow: none;
+            border-width: 1px;
+            /*padding: 5px 5px;*/
+            /*border-width: 2px;*/
+        }
+
+        .row_class{
+            background-color: beige;
+           /* border: 9px double #4347b7;*/
+            padding: 0px;
+        }
+
+        .hadding_class{
+            color: white;
+            text-align: center;
+            padding: 8px !important;
+            margin: 0px;    
+            font-size: 10px;                     
+        }
+
+        .date_class{
+            font-size:14px;
+        }
+
+        .mtop20{
+            margin-top: 0px;
+        }
+    }
+
+    @media screen and (min-width: 200px) and (max-width: 320px) {
+        .space_class{
+            padding-right: 6px !important;
+            padding-left: 6px !important;
+        }
+
+        .space_c{
+            padding-right: 2px !important;
+            padding-left: 2px !important;
+        }
+
+        .td_new {        
+          font-size: 8.9px;
+            padding: 0px;
+            margin: 0px;
+            border-width: 1px;
+            /*padding: 5px 5px;*/
+            /*border-width: 2px;*/
+            /*text-shadow: 1px 1px 1px black;*/
+            text-shadow: none;
+        }
+        .th_font{
+            padding: 0px;
+            margin: 0px;
+            /*font-size: 8.9px;*/
+            font-size: 7.3px;
+            text-shadow: none;
+            border-width: 1px;
+            /*padding: 5px 5px;*/
+            /*border-width: 2px;*/
+        }
+
+        .row_class{
+            background-color: beige;
+            /*border: 9px double #4347b7;*/
+            padding: 0px;
+        }
+
+        .hadding_class{
+            color: white;
+            text-align: center;
+            padding: 8px !important;
+            margin: 0px;    
+           font-size: 10px;                      
+        }
+
+        .date_class{
+            font-size:14px;
+        }
+
+        .mtop20{
+            margin-top: 0px;
+        }
+    }
+
+
+</style>
+<div class="list-group text-center text-uppercase big my_border">    
+    <div class="row" style="margin-top: 10px;margin-bottom: 10px;">                 
+        <div class="wave list-group-item text-center bg-1" style="text-align:center;"><a class="my-btn" href="../index.html"><b>See All Tips & Tricks</b></a></div>        
+    </div> 
+
+</div>  
+
+
+        <div class="hjj" align="center">
+            <div class="rko" align="center">
+                <font size="4">
+                    <h2 style="margin-top: 12px; background-color: orangered; padding: 10px;">Milan Night Chart</h2>
+                </font>
+            </div>
+            <table class="RECORD" border="1">
+                <tbody>
+                    <tbody>
+            	<tr><td>03 </td><td>82 </td><td>25 </td><td><span style="color: #ff0000;">27 </span> </td><td>54 </td><td>67 </td></tr><tr><td><span style="color: #ff0000;">61 </span> </td><td>52 </td><td>90 </td><td>30 </td><td>84 </td><td>30 </td></tr><tr><td>26 </td><td>25 </td><td>21 </td><td>35 </td><td>63 </td><td>81 </td></tr><tr><td>76 </td><td>29 </td><td>10 </td><td>76 </td><td>70 </td><td>68 </td></tr><tr><td><span style="color: #ff0000;"> 44</span> </td><td>31 </td><td><span style="color: #ff0000;"> 33</span> </td><td><span style="color: #ff0000;"> 88</span> </td><td>53 </td><td>58 </td></tr><tr><td>52 </td><td>91 </td><td>59 </td><td>43 </td><td><span style="color: #ff0000;"> 99</span> </td><td><span style="color: #ff0000;"> 99</span> </td></tr><tr><td><span style="color: #ff0000;"> 38</span> </td><td>48 </td><td>40 </td><td><span style="color: #FF0000;">49</span> </td><td>09 </td><td><span style="color: #ff0000;"> **</span> </td></tr><tr><td><span style="color: #ff0000;"> **</span> </td><td>75 </td><td>03 </td><td>90 </td><td>29 </td><td>31 </td></tr><tr><td>59 </td><td>01 </td><td>40 </td><td>34 </td><td>97 </td><td>53 </td></tr><tr><td>53 </td><td>19 </td><td><span style="color: #ff0000;"> **</span> </td><td>64 </td><td><span style="color: #ff0000;">** </span> </td><td>71 </td></tr><tr><td>98 </td><td>81 </td><td>67 </td><td><span style="color: #ff0000;"> 99</span> </td><td>67 </td><td>52 </td></tr><tr><td>71 </td><td><span style="color: #ff0000;">66 </span> </td><td><span style="color: #ff0000;"> 99</span> </td><td><span style="color: #ff0000;"> 05</span> </td><td>28 </td><td>76 </td></tr><tr><td><span style="color: #ff0000;"> 88</span> </td><td>40 </td><td><span style="color: #ff0000;"> 66</span> </td><td>47 </td><td>95 </td><td>92 </td></tr><tr><td>60 </td><td><span style="color: #ff0000;"> 38</span> </td><td>32 </td><td>52 </td><td>47 </td><td>28 </td></tr><tr><td><span style="color: #ff0000;"> 44</span> </td><td>91 </td><td><span style="color: #ff0000;"> 61</span> </td><td><span style="color: #ff0000;">** </span> </td><td>56 </td><td>54 </td></tr><tr><td>78 </td><td>84 </td><td>87 </td><td>48 </td><td>28 </td><td>41 </td></tr><tr><td>84 </td><td>21 </td><td>75 </td><td><span style="color: #ff0000;"> 11</span> </td><td>80 </td><td>41 </td></tr><tr><td>85 </td><td>48 </td><td><span style="color: #ff0000;"> 66</span> </td><td>54 </td><td>25 </td><td>07 </td></tr><tr><td><span style="color: #ff0000;"> **</span> </td><td>07 </td><td>79 </td><td>75 </td><td>18 </td><td>01 </td></tr><tr><td>85 </td><td>29 </td><td><span style="color: #ff0000;"> 05</span> </td><td>26 </td><td>01 </td><td>41 </td></tr><tr><td>70 </td><td><span style="color: #ff0000;"> 05</span> </td><td><span style="color: #ff0000;"> 94</span> </td><td>31 </td><td>59 </td><td>92 </td></tr><tr><td>97 </td><td><span style="color: #ff0000;"> 66</span> </td><td>46 </td><td>41 </td><td><span style="color: #ff0000;"> 44</span> </td><td>46 </td></tr><tr><td>79 </td><td>80 </td><td>73 </td><td>03 </td><td>48 </td><td><span style="color: #ff0000;"> 50</span> </td></tr><tr><td>34 </td><td>04 </td><td>24 </td><td>89 </td><td>04 </td><td><span style="color: #ff0000;"> 99</span> </td></tr><tr><td>86 </td><td>87 </td><td>20 </td><td>80 </td><td>82 </td><td>82 </td></tr><tr><td>19 </td><td><span style="color: #ff0000;"> 61</span> </td><td><span style="color: #ff0000;"> 88</span> </td><td>43 </td><td>39 </td><td>87 </td></tr><tr><td>54 </td><td>82 </td><td>19 </td><td>67 </td><td><span style="color: #ff0000;"> 05</span> </td><td>29 </td></tr><tr><td>29 </td><td>15 </td><td>85 </td><td><span style="color: #ff0000;">22 </span> </td><td><span style="color: #ff0000;">88 </span> </td><td><span style="color: #ff0000;"> **</span> </td></tr><tr><td>86 </td><td>95 </td><td>43 </td><td>96 </td><td>48 </td><td><span style="color: #ff0000;"> 77</span> </td></tr><tr><td><span style="color: #ff0000;"> 50</span> </td><td>90 </td><td><span style="color: #ff0000;"> 66</span> </td><td><span style="color: #ff0000;">** </span> </td><td><span style="color: #ff0000;"> 05</span> </td><td>60 </td></tr><tr><td>67 </td><td>46 </td><td>26 </td><td>62 </td><td>62 </td><td>97 </td></tr><tr><td>64 </td><td>26 </td><td>07 </td><td>13 </td><td>59 </td><td>87 </td></tr><tr><td>69 </td><td>29 </td><td>41 </td><td>25 </td><td>20 </td><td>34 </td></tr><tr><td>85 </td><td>87 </td><td>18 </td><td>51 </td><td>39 </td><td>91 </td></tr><tr><td>75 </td><td>62 </td><td>56 </td><td>58 </td><td>20 </td><td>76 </td></tr><tr><td>81 </td><td>02 </td><td>48 </td><td><span style="color: #ff0000;">** </span> </td><td><span style="color: #ff0000;">55 </span> </td><td>21 </td></tr><tr><td>58 </td><td>87 </td><td><span style="color: #ff0000;"> 77</span> </td><td>71 </td><td><span style="color: #ff0000;"> 88</span> </td><td>42 </td></tr><tr><td>37 </td><td>37 </td><td>51 </td><td>91 </td><td>90 </td><td><span style="color: #ff0000;">49 </span> </td></tr><tr><td>58 </td><td>04 </td><td>39 </td><td>95 </td><td>86 </td><td>15 </td></tr><tr><td>51 </td><td>54 </td><td><span style="color: #ff0000;">88</span> </td><td>84 </td><td>71 </td><td>08 </td></tr><tr><td>90 </td><td>53 </td><td>21 </td><td>26 </td><td><span style="color: #ff0000;">72</span> </td><td>26 </td></tr><tr><td>37 </td><td><span style="color: #ff0000;">44 </span></td><td><span style="color: #ff0000;">22 </span></td><td>47 </td><td>18 </td><td>59 </td></tr><tr><td>24 </td><td>98 </td><td>51 </td><td>76 </td><td>47 </td><td>70 </td></tr><tr><td>01 </td><td>02 </td><td><span style="color: #ff0000;">55 </span></td><td>31 </td><td>47 </td><td>26 </td></tr><tr><td>89 </td><td><span style="color: #ff0000;">72 </span></td><td>31 </td><td><span style="color: #ff0000;">05 </span></td><td>43 </td><td><span style="color: #ff0000;">50 </span></td></tr><tr><td>25 </td><td>47 </td><td><span style="color: #ff0000;">05 </span></td><td>84 </td><td>92 </td><td>89 </td></tr><tr><td>47 </td><td>91 </td><td>69 </td><td>45 </td><td>30 </td><td>96 </td></tr><tr><td><span style="color: #ff0000;">77 </span> </td><td>42 </td><td>19 </td><td>10 </td><td>79 </td><td><span style="color: #ff0000;">66 </span> </td></tr><tr><td>10 </td><td><span style="color: #ff0000;">61 </span> </td><td>81 </td><td>01 </td><td><span style="color: #ff0000;">88 </span> </td><td>04 </td></tr><tr><td>23 </td><td>14 </td><td>78 </td><td>67 </td><td>48 </td><td>47 </td></tr><tr><td>21 </td><td>85 </td><td>85 </td><td>60 </td><td>34 </td><td>01 </td></tr><tr><td><span style="color: #ff0000;">49 </span> </td><td>69 </td><td><span style="color: #ff0000;">11 </span> </td><td><span style="color: #ff0000;">33 </span> </td><td>31 </td><td><span style="color: #ff0000;">66 </span> </td></tr><tr><td>19 </td><td>39 </td><td>30 </td><td><span style="color: #ff0000;">55 </span> </td><td><span style="color: #ff0000;">94 </span> </td><td>28 </td></tr><tr><td>43 </td><td>54 </td><td>36 </td><td>71 </td><td>32 </td><td>02 </td> </tr><tr><td><span style="color: #ff0000;">61 </span> </td><td>15 </td><td>09 </td><td>60 </td><td>09 </td><td><span style="color: #ff0000;">55 </span> </td></tr><tr><td>54 </td><td>70 </td><td>54 </td><td>76 </td><td><span style="color: #ff0000;">77 </span> </td><td><span style="color: #ff0000;">27 </span> </td></tr><tr><td>73 </td><td><span style="color: #ff0000;">16 </span> </td><td>14 </td><td><span style="color: #ff0000;">**</span> </td><td><span style="color: #ff0000;">66</span> </td><td>47 </td></tr><tr><td><span style="color: #ff0000;">55</span> </td><td>13 </td><td>02 </td><td>93 </td><td>76 </td><td><span style="color: #ff0000;">49</span> </td></tr><tr><td>53 </td><td>73 </td><td><span style="color: #ff0000;">**</span> </td><td>86 </td><td>32 </td><td>56 </td></tr><tr><td><span style="color: #ff0000;">**</span> </td><td><span style="color: #ff0000;">**</span> </td><td><span style="color: #ff0000;">99</span> </td><td>65 </td><td><span style="color: #ff0000;">77</span> </td><td><span style="color: #ff0000;">61</span> </td></tr><tr><td>59 </td><td>20 </td><td>64 </td><td>34 </td><td><span style="color: #ff0000;">77</span> </td><td>51 </td></tr><tr><td><span style="color: #ff0000;">77</span> </td><td>56 </td><td><span style="color: #ff0000;">05</span> </td><td>13 </td><td>53 </td><td>20 </td></tr><tr><td>87 </td><td>90 </td><td>51 </td><td>34 </td><td>60 </td><td>42 </td></tr><tr><td>60 </td><td>93 </td><td>87 </td><td>07 </td><td>73 </td><td>21 </td></tr><tr><td>18 </td><td>18 </td><td>68 </td><td><span style="color: #ff0000;">11 </span> </td><td>29 </td><td><span style="color: #ff0000;">** </span> </td></tr><tr><td><span style="color: #ff0000;">44 </span> </td><td><span style="color: #ff0000;">72 </span> </td><td><span style="color: #ff0000;">27 </span> </td><td>71 </td><td><span style="color: #ff0000;">44 </span> </td><td>45 </td></tr><tr><td>01 </td><td>26 </td><td>64 </td><td>58 </td><td>14 </td><td>09 </td></tr><tr><td>62 </td><td>07 </td><td>97 </td><td>25 </td><td>25 </td><td>04 </td></tr><tr><td>58 </td><td><span style="color: #ff0000;"> 27</span> </td><td><span style="color: #ff0000;">** </span></td><td>73 </td><td>29 </td><td><span style="color: #ff0000;">** </span></td></tr><tr><td>95 </td><td><span style="color: #ff0000;">94 </span></td><td>56 </td><td>95 </td><td>30 </td><td>78 </td></tr><tr><td>70 </td><td>60 </td><td><span style="color: #ff0000;">27 </span> </td><td>40 </td><td>46 </td><td>62 </td></tr><tr><td><span style="color: #ff0000;">** </span> </td><td><span style="color: #ff0000;">** </span> </td><td><span style="color: #ff0000;">** </span> </td><td><span style="color: #ff0000;">** </span> </td><td><span style="color: #ff0000;">** </span> </td><td><span style="color: #ff0000;">** </span> </td></tr><tr><td>68 </td><td>91 </td><td>21 </td><td>76 </td><td>37 </td><td><span style="color: #ff0000;">44 </span> </td></tr><tr><td>04 </td><td>98 </td><td>63 </td><td><span style="color: #ff0000;">05 </span> </td><td>69 </td><td>81 </td></tr><tr><td><span style="color: #ff0000;">55 </span> </td><td>30 </td><td>45 </td><td><span style="color: #ff0000;">72 </span> </td><td>64 </td><td><span style="color: #ff0000;">50 </span> </td></tr><tr><td>62 </td><td>97 </td><td><span style="color: #ff0000;">16 </span> </td><td>79 </td><td><span style="color: #ff0000;">55 </span> </td><td>71 </td></tr><tr><td>53 </td><td>15 </td><td>76 </td><td>81 </td><td>90 </td><td>68 </td></tr><tr><td>08 </td><td>31 </td><td>18 </td><td>85 </td><td>68 </td><td>64 </td></tr><tr><td><span style="color: #ff0000;">22 </span> </td><td>41 </td><td>81 </td><td>06 </td><td>20 </td><td><span style="color: #ff0000;">38 </span> </td></tr><tr><td><span style="color: #ff0000;">16 </span> </td><td>62 </td><td>98 </td><td>81 </td><td>34 </td><td>52 </td></tr><tr><td><span style="color: #ff0000;">** </span> </td><td>34 </td><td><span style="color: #ff0000;">66 </span> </td><td>01 </td><td><span style="color: #ff0000;">16 </span> </td><td>08 </td></tr><tr><td>84 </td><td>10 </td><td>86 </td><td>39 </td><td>71 </td><td><span style="color: #ff0000;">** </span> </td></tr><tr><td>68 </td><td>08 </td><td>23 </td><td>01 </td><td>51 </td><td>97 </td></tr><tr><td>82 </td><td>52 </td><td>93 </td><td>70 </td><td>71 </td><td>58 </td></tr><tr><td><span style="color: #ff0000;">55 </span> </td><td>96 </td><td>29 </td><td><span style="color: #ff0000;">77 </span> </td><td><span style="color: #ff0000;">83 </span> </td><td>70 </td></tr><tr><td>20 </td><td>92 </td><td>46 </td><td>31 </td><td>02 </td><td><span style="color: #ff0000;">77 </span> </td></tr><tr><td><span style="color: #ff0000;">16 </span> </td><td>19 </td><td>98 </td><td>79 </td><td>03 </td><td>70 </td></tr><tr><td><span style="color: #ff0000;">38 </span> </td><td>36 </td><td><span style="color: #ff0000;">27 </span> </td><td>54 </td><td>32 </td><td>75 </td></tr><tr><td>62 </td><td>76 </td><td>30 </td><td><span style="color: #ff0000;">83</span> </td><td><span style="color: #ff0000;">72</span> </td><td>30 </td></tr><tr><td>23 </td><td><span style="color: #ff0000;">22 </span> </td><td> 04 </td><td><span style="color: #ff0000;">66 </span> </td><td> 48 </td><td><span style="color: #ff0000;"> 27</span> </td></tr><tr><td><span style="color: #ff0000;"> 22 </span> </td><td>06 </td><td><span style="color: #ff0000;"> ** </span> </td><td> 92 </td><td>46 </td><td><span style="color: #ff0000;">77 </span> </td></tr><tr><td>75 </td><td>23</td><td>06</td><td>30 </td><td>17</td><td>23</td></tr><tr><td>71</td><td><span style="color: #ff0000;"> 99</span> </td><td>34</td><td><span style="color: #ff0000;"> 00</span> </td><td>85 </td><td>32 </td></tr><tr><td>73 </td><td>75 </td><td><span style="color: #ff0000;">38 </span> </td><td>85 </td><td>36 </td><td>43 </td></tr><tr><td>65 </td><td>73 </td><td>48 </td><td>34 </td><td><span style="color: #ff0000;"> 88</span> </td><td>41 </td></tr><tr><td>06 </td><td><span style="color: #ff0000;"> 49</span> </td><td>68 </td><td>40 </td><td>40 </td><td>86 </td></tr><tr><td>10 </td><td>08 </td><td><span style="color: #ff0000;"> 16</span> </td><td>87 </td><td><span style="color: #ff0000;"> 83</span> </td><td>02 </td></tr><tr><td>90 </td><td>41 </td><td><span style="color: #ff0000;"> 38</span> </td><td>92 </td><td>25 </td><td>45 </td></tr><tr><td>39 </td><td> 65 </td><td><span style="color: #ff0000;">88 </span> </td><td> 10 </td><td> 41 </td><td> 30 </td></tr><tr><td>70</td><td>57</td><td>74</td><td>95</td><td>20</td><td>23</td></tr><tr><td>03</td><td>36</td><td>79</td><td><span style="color: #ff0000;">77</span></td><td><span style="color: #ff0000;">61</span></td><td>20</td></tr><tr><td>97</td><td>32</td><td>36</td><td>46</td><td>04</td><td>82</td></tr><tr><td>93</td><td>10</td><td>82</td><td><span style="color: #ff0000;">44</span></td><td>53</td><td><span style="color: #ff0000;">77</span></td></tr><tr><td>45</td><td>12</td><td>08</td><td><span style="color: #ff0000;">38</span></td><td>81</td><td><span style="color: #ff0000;">83</span></td></tr><tr><td><span style="color: #ff0000;">77</span></td><td>36</td><td>63</td><td>26</td><td>86</td><td>75</td></tr><tr><td>81</td><td>62</td><td>52</td><td><span style="color: #ff0000;">00</span></td><td><span style="color: #ff0000;">44</span></td><td>15</td></tr><tr><td>04</td><td>47</td><td>43</td><td>42</td><td>29</td><td>67</td></tr><tr><td>71</td><td>20</td><td><span style="color: #ff0000;">49</span></td><td>82</td><td>04</td><td>04</td></tr><tr><td>36</td><td>04</td><td>52</td><td>46</td><td><span style="color: #ff0000;">38</span></td><td>65</td></tr><tr><td>48</td><td>74</td><td>74</td><td><span style="color: #ff0000;">83</span></td><td><span style="color: #ff0000;">**</span></td><td>26</td></tr><tr><td>35</td><td>64</td><td>03</td><td><span style="color: #ff0000;">**</span></td><td>06</td><td>05</td></tr><tr><td>39</td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">72</span></td><td>10</td><td>98</td><td>46</td></tr><tr><td><span style="color: #ff0000;">16</span></td><td>39</td><td>80</td><td>31</td><td>08</td><td>96</td></tr><tr><td>71</td><td>64</td><td><span style="color: #ff0000;">72</span></td><td><span style="color: #ff0000;">22</span></td><td>02</td><td>81</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>40</td><td>13</td><td>95</td><td>84</td><td>64</td></tr><tr><td><span style="color: #ff0000;">05</span></td><td><span style="color: #ff0000;">38</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">49</span></td><td>71</td><td><span style="color: #ff0000;">05</span></td></tr><tr><td>70</td><td><span style="color: #ff0000;">49</span></td><td>90</td><td>56</td><td>97</td><td>42</td></tr><tr><td>18</td><td>76</td><td>15</td><td>06</td><td>95</td><td>42</td></tr><tr><td>42</td><td>10</td><td>86</td><td>35</td><td>28</td><td>95</td></tr><tr><td>32</td><td>26</td><td><span style="color: #ff0000;">**</span></td><td>74</td><td>65</td><td>95</td></tr><tr><td>89</td><td>35</td><td>67</td><td>14</td><td>21</td><td>42</td></tr><tr><td>28</td><td>70</td><td>90</td><td>37</td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>04</td><td>89</td><td>15</td><td>62</td><td>60</td><td>34</td></tr><tr><td>21</td><td>67</td><td>15</td><td>24</td><td><span style="color: #ff0000;">88</span></td><td>82</td></tr><tr><td><span style="color: #ff0000;">72</span></td><td>68</td><td>65</td><td>98</td><td>67</td><td><span style="color: #ff0000;">88</span></td></tr><tr><td>54</td><td><span style="color: #ff0000;">05</span></td><td>35</td><td><span style="color: #ff0000;">00</span></td><td><span style="color: #ff0000;">27</span></td><td>23</td></tr><tr><td><span style="color: #ff0000;">99</span></td><td>58</td><td>32</td><td>92</td><td><span style="color: #ff0000;">44</span></td><td>01</td></tr><tr><td>15</td><td>96</td><td>46</td><td>63</td><td>67</td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>14</td><td>84</td><td>28</td><td>41</td><td>70</td><td>86</td></tr><tr><td><span style="color: #ff0000;">00</span></td><td>68</td><td>36</td><td><span style="color: #ff0000;">16</span></td><td>45</td><td>36</td></tr><tr><td>84</td><td><span style="color: #ff0000;">99</span></td><td>85</td><td>59</td><td>64</td><td>37</td></tr><tr><td>62</td><td><span style="color: #ff0000;">**</span></td><td>59</td><td>75</td><td>46</td><td>76</td></tr><tr><td>32</td><td>87</td><td>93</td><td><span style="color: #ff0000;">16</span></td><td>81</td><td><span style="color: #ff0000;">33</span></td></tr><tr><td>62</td><td>81</td><td>17</td><td>57</td><td>03</td><td><span style="color: #ff0000;">99</span></td></tr><tr><td>80</td><td>36</td><td>87</td><td>87</td><td>01</td><td>13</td></tr><tr><td>65</td><td>69</td><td>92</td><td>01</td><td>89</td><td>74</td></tr><tr><td>58</td><td><span style="color: #ff0000;">50</span></td><td>23</td><td>63</td><td><span style="color: #ff0000;">83</span></td><td>36</td></tr><tr><td>76</td><td>30</td><td>20</td><td>63</td><td><span style="color: #ff0000;">50</span></td><td>68</td></tr><tr><td><span style="color: #ff0000;">16</span></td><td><span style="color: #ff0000;">72</span></td><td>45</td><td><span style="color: #ff0000;">99</span></td><td>97</td><td>91</td></tr><tr><td>35</td><td>69</td><td>42</td><td>63</td><td>10</td><td>17</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>46</td><td>04</td><td>34</td><td>64</td><td>41</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>84</td><td>73</td><td>60</td><td>20</td><td>26</td></tr><tr><td>42</td><td>52</td><td>93</td><td><span style="color: #ff0000;">61</span></td><td>95</td><td>34</td></tr><tr><td>13</td><td><span style="color: #ff0000;">16</span></td><td>23</td><td><span style="color: #ff0000;">49</span></td><td>91</td><td>29</td></tr><tr><td>96</td><td>12</td><td>32</td><td>34</td><td><span style="color: #ff0000;">05</span></td><td>84</td></tr><tr><td>32</td><td>70</td><td>24</td><td><span style="color: #ff0000;">77</span></td><td>97</td><td>67</td></tr><tr><td>53</td><td>02</td><td>25</td><td>10</td><td>40</td><td>23</td></tr><tr><td><span style="color: #ff0000;">94</span></td><td>29</td><td>01</td><td>73</td><td>32</td><td>10</td></tr><tr><td><span style="color: #ff0000;">00</span></td><td>71</td><td><span style="color: #ff0000;">49</span></td><td><span style="color: #ff0000;">94</span></td><td>04</td><td><span style="color: #ff0000;">88</span></td></tr><tr><td>71</td><td><span style="color: black">15</span></td><td><span style="color: black">07</span></td><td><span style="color: red">00</span></td><td><span style="color: black">52</span></td><td><span style="color: black">58</span></td></tr><tr><td><span style="color: black">45</span></td><td><span style="color: red">22</span></td><td><span style="color: black">62</span></td><td><span style="color: black">96</span></td><td><span style="color: red">05</span></td><td><span style="color: black">24</span></td></tr><tr><td><span style="color: black">97</span></td><td><span style="color: black">54</span></td><td><span style="color: black">57</span></td><td>43</td><td>98</td><td>20</td></tr><tr><td>43</td><td>91</td><td>81</td><td><span style="color: #ff0000;">72</span></td><td>08</td><td>10</td></tr><tr><td>78</td><td>15</td><td>91</td><td>54</td><td>53</td><td>76</td></tr><tr><td>59</td><td>63</td><td>24</td><td>15</td><td>93</td><td>91</td></tr><tr><td>80</td><td>24</td><td>73</td><td>95</td><td>69</td><td>69</td></tr><tr><td>93</td><td>18</td><td>76</td><td>07</td><td><span style="color: #ff0000;">22</span></td><td>01</td></tr><tr><td>96</td><td>89</td><td><span style="color: #ff0000;">49</span></td><td><span style="color: #ff0000;">05</span></td><td>93</td><td>08</td></tr><tr><td>41</td><td>14</td><td>20</td><td>59</td><td>41</td><td><span style="color: red">77</span></td></tr><tr><td>19</td><td><span style="color: #ff0000;">**</span></td><td>95</td><td>47</td><td><span style="color: #ff0000;">94</span></td><td>03</td></tr><tr><td>93</td><td>75</td><td><span style="color: red">22</span></td><td>42</td><td><span style="color: red">50</span></td><td>75</td></tr><tr><td>85</td><td><span style="color: #ff0000;">27</span></td><td>62</td><td>08</td><td><span style="color: #ff0000;">**</span></td><td>98</td></tr><tr><td><span style="color: red">55</span></td><td>73</td><td>64</td><td>67</td><td>45</td><td><span style="color: #ff0000;">38</span></td></tr><tr><td>52</td><td>67</td><td><span style="color: #ff0000;">83</span></td><td>89</td><td>24</td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>90</td><td>68</td><td>43</td><td>03</td><td>18</td><td>71</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>87</td><td><span style="color: #ff0000;">38</span></td><td><span style="color: #ff0000;">77</span></td><td><span style="color: #ff0000;">22</span></td><td>93</td></tr><tr><td><span style="color: red">50</span></td><td><span style="color: #ff0000;">88</span></td><td>06</td><td>01</td><td>02</td><td><span style="color: #ff0000;">55</span></td></tr><tr><td>20</td><td>29</td><td>63</td><td>52</td><td>28</td><td>81</td></tr><tr><td>87</td><td><span style="color: #ff0000;">49</span></td><td>74</td><td><span style="color: #ff0000;">55</span></td><td><span style="color: #ff0000;">**</span></td><td>20</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>28</td><td>67</td><td>54</td><td>35</td><td>03</td></tr><tr><td>26</td><td>93</td><td>09</td><td>29</td><td>97</td><td>30</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">88</span></td><td>09</td><td>57</td><td><span style="color: #ff0000;">38</span></td><td>92</td></tr><tr><td>53</td><td>65</td><td>78</td><td><span style="color: #ff0000;">22</span></td><td>37</td><td>09</td></tr><tr><td>75</td><td>20</td><td>13</td><td>59</td><td>71</td><td>48</td></tr><tr><td>87</td><td>73</td><td>09</td><td>63</td><td><span style="color: #ff0000;">55</span></td><td>31</td></tr><tr><td>46</td><td>59</td><td>80</td><td>06</td><td><span style="color: #ff0000;">00</span></td><td>57</td></tr><tr><td>63</td><td><span style="color: #ff0000;">05</span></td><td>35</td><td>32</td><td>73</td><td>26</td></tr><tr><td><span style="color: #ff0000;">49</span></td><td><span style="color: #ff0000;">49</span></td><td>81</td><td>38</td><td>42</td><td>41</td></tr><tr><td>81</td><td>21</td><td>40</td><td><span style="color: #ff0000;">72</span></td><td>70</td><td>75</td></tr><tr><td><span style="color: #ff0000;">94</span></td><td><span style="color: #ff0000;">88</span></td><td><span style="color: #ff0000;">38</span></td><td>63</td><td>48</td><td>12</td></tr><tr><td>62</td><td>02</td><td>53</td><td>01</td><td>70</td><td>09</td></tr><tr><td>42</td><td>46</td><td>37</td><td>01</td><td>31</td><td><span style="color: #ff0000;">94</span></td></tr><tr><td><span style="color: #ff0000;">77</span></td><td>81</td><td><span style="color: #ff0000;">**</span></td><td>02</td><td>78</td><td>48</td></tr><tr><td><span style="color: #ff0000;">94</span></td><td>15</td><td>06</td><td>78</td><td>54</td><td>46</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>25</td><td>42</td><td>90</td><td>82</td><td>64</td></tr><tr><td>37</td><td><span style="color: #ff0000;">22</span></td><td>19</td><td>73</td><td>85</td><td>73</td></tr><tr><td>78</td><td>70</td><td>34</td><td>93</td><td>25</td><td>82</td></tr><tr><td>07</td><td>48</td><td>40</td><td>70</td><td>23</td><td>03</td></tr><tr><td><span style="color: #ff0000;">33</span></td><td><span style="color: #ff0000;">05</span></td><td>47</td><td>67</td><td>25</td><td>01</td></tr><tr><td>78</td><td>28</td><td><span style="color: #ff0000;">94</span></td><td>18</td><td><span style="color: #ff0000;">**</span></td><td>69</td></tr><tr><td>81</td><td>82</td><td>14</td><td><span style="color: #ff0000;">61</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>71</td><td><span style="color: #ff0000;">27</span></td><td>97</td><td>26</td><td>73</td></tr><tr><td><span style="color: #ff0000;">05</span></td><td>62</td><td>43</td><td><span style="color: #ff0000;">49</span></td><td><span style="color: #ff0000;">50</span></td><td>98</td></tr><tr><td>73</td><td>37</td><td>40</td><td>95</td><td>45</td><td>57</td></tr><tr><td>35</td><td>65</td><td><span style="color: #ff0000;">00</span></td><td>79</td><td>42</td><td><span style="color: #ff0000;">88</span></td></tr><tr><td><span style="color: #ff0000;">99</span></td><td>28</td><td>35</td><td><span style="color: #ff0000;">83</span></td><td><span style="color: #ff0000;">88</span></td><td><span style="color: #ff0000;">22</span></td></tr><tr><td><span style="color: #ff0000;">00</span></td><td>58</td><td><span style="color: #ff0000;">22</span></td><td>13</td><td>08</td><td>31</td></tr><tr><td>48</td><td>97</td><td>70</td><td><span style="color: #ff0000;">94</span></td><td>59</td><td>67</td></tr><tr><td>64</td><td><span style="color: #ff0000;">61</span></td><td>80</td><td>93</td><td>31</td><td>15</td></tr><tr><td><span style="color: #ff0000;">00</span></td><td>43</td><td>42</td><td>98</td><td><span style="color: #ff0000;">11</span></td><td>43</td></tr><tr><td>47</td><td>74</td><td>97</td><td>60</td><td>69</td><td><span style="color: #ff0000;">55</span></td></tr><tr><td>08</td><td><span style="color: #ff0000;">49</span></td><td>25</td><td>30</td><td>74</td><td>70</td></tr><tr><td>08</td><td>43</td><td>80</td><td><span style="color: #ff0000;">61</span></td><td>58</td><td>04</td></tr><tr><td>07</td><td>01</td><td>08</td><td>17</td><td>62</td><td>73</td></tr><tr><td>45</td><td>59</td><td>02</td><td>92</td><td>35</td><td>13</td></tr><tr><td>21</td><td>46</td><td>04</td><td>17</td><td>47</td><td>01</td></tr><tr><td>65</td><td><span style="color: #ff0000;">50</span></td><td>13</td><td>17</td><td><span style="color: #ff0000;">94</span></td><td>92</td></tr><tr><td><span style="color: #ff0000;">05</span></td><td>30</td><td>86</td><td>30</td><td>52</td><td>63</td></tr><tr><td><span style="color: #ff0000;">49</span></td><td>06</td><td>58</td><td>65</td><td>63</td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>04</td><td>15</td><td><span style="color: #ff0000;">49</span></td><td>04</td><td>76</td><td>73</td></tr><tr><td>60</td><td>51</td><td>51</td><td><span style="color: #ff0000;">50</span></td><td><span style="color: #ff0000;">38</span></td><td>10</td></tr><tr><td><span style="color: #ff0000;">22</span></td><td>84</td><td>17</td><td>85</td><td>45</td><td>87</td></tr><tr><td><span style="color: #ff0000;">61</span></td><td>97</td><td><span style="color: #ff0000;">38</span></td><td><span style="color: #ff0000;">55</span></td><td>20</td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>36</td><td>30</td><td>06</td><td>59</td><td>19</td><td>85</td></tr><tr><td>70</td><td>68</td><td>34</td><td>91</td><td>86</td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>52</td><td>24</td><td>34</td><td>93</td><td>71</td><td>54</td></tr><tr><td>09</td><td>93</td><td>57</td><td>23</td><td>14</td><td>65</td></tr><tr><td>52</td><td>30</td><td>46</td><td>20</td><td><span style="color: #ff0000;">**</span></td><td>48</td></tr><tr><td>71</td><td>23</td><td>63</td><td>60</td><td>92</td><td>80</td></tr><tr><td>89</td><td>62</td><td>17</td><td>23</td><td><span style="color: #ff0000;">11</span></td><td>34</td></tr><tr><td>29</td><td><span style="color: #ff0000;">50</span></td><td><span style="color: #ff0000;">88</span></td><td>46</td><td>20</td><td>45</td></tr><tr><td>37</td><td>06</td><td>80</td><td>91</td><td><span style="color: #ff0000;">88</span></td><td>19</td></tr><tr><td><span style="color: #ff0000;">99</span></td><td>12</td><td>60</td><td><span style="color: #ff0000;">**</span></td><td>07</td><td>36</td></tr><tr><td>78</td><td>86</td><td><span style="color: #ff0000;">61</span></td><td>63</td><td>74</td><td><span style="color: #ff0000;">61</span></td></tr><tr><td>21</td><td>28</td><td>23</td><td>98</td><td>67</td><td>23</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>54</td><td>58</td><td>37</td><td>89</td><td>58</td><td><span style="color: #ff0000;">55</span></td></tr><tr><td><span style="color: #ff0000;">16</span></td><td><span style="color: #ff0000;">61</span></td><td>15</td><td><span style="color: #ff0000;">22</span></td><td>40</td><td>75</td></tr><tr><td>31</td><td><span style="color: #ff0000;">38</span></td><td>07</td><td>68</td><td>18</td><td>46</td></tr><tr><td>25</td><td>84</td><td><span style="color: #ff0000;">00</span></td><td>51</td><td>79</td><td>57</td></tr><tr><td>85</td><td>91</td><td>98</td><td>78</td><td>19</td><td><span style="color: #ff0000;">44</span></td></tr><tr><td>08</td><td>85</td><td>51</td><td>57</td><td>09</td><td>79</td></tr><tr><td>90</td><td>85</td><td><span style="color: #ff0000;">77</span></td><td>52</td><td>03</td><td>17</td></tr><tr><td>21</td><td>40</td><td>90</td><td>35</td><td>01</td><td><span style="color: #ff0000;">44</span></td></tr><tr><td><span style="color: #ff0000;">44</span></td><td><span style="color: #ff0000;">88</span></td><td>29</td><td><span style="color: #ff0000;">**</span></td><td>91</td><td>59</td></tr><tr><td><span style="color: #ff0000;">50</span></td><td>09</td><td>74</td><td>24</td><td><span style="color: #ff0000;">00</span></td><td>81</td></tr><tr><td>51</td><td><span style="color: #ff0000;">**</span></td><td>06</td><td>81</td><td>42</td><td>42</td></tr><tr><td>30</td><td><span style="color: #ff0000;">94</span></td><td>91</td><td>53</td><td>21</td><td>34</td></tr><tr><td>01</td><td>13</td><td>04</td><td>47</td><td><span style="color: #ff0000;">50</span></td><td>08</td></tr><tr><td>03</td><td>93</td><td>39</td><td><span style="color: #ff0000;">88</span></td><td>60</td><td>64</td></tr><tr><td>79</td><td>14</td><td>45</td><td>18</td><td><span style="color: #ff0000;">83</span></td><td>93</td></tr><tr><td>57</td><td>54</td><td>64</td><td>35</td><td>15</td><td>89</td></tr><tr><td>24</td><td>51</td><td>51</td><td><span style="color: #ff0000;">33</span></td><td>86</td><td><span style="color: #ff0000;">33</span></td></tr><tr><td>48</td><td><span style="color: #ff0000;">99</span></td><td><span style="color: #ff0000;">27</span></td><td><span style="color: #ff0000;">11</span></td><td>62</td><td>95</td></tr><tr><td>24</td><td>98</td><td>75</td><td><span style="color: #ff0000;">**</span></td><td>67</td><td>98</td></tr><tr><td>26</td><td>81</td><td>25</td><td>12</td><td>42</td><td>26</td></tr><tr><td><span style="color: #ff0000;">55</span></td><td>80</td><td>43</td><td>34</td><td>19</td><td>26</td></tr><tr><td>07</td><td><span style="color: #ff0000;">88</span></td><td>36</td><td><span style="color: #ff0000;">11</span></td><td><span style="color: #ff0000;">49</span></td><td>02</td></tr><tr><td><span style="color: #ff0000;">72</span></td><td>80</td><td>90</td><td>21</td><td><span style="color: #ff0000;">11</span></td><td>81</td></tr><tr><td>32</td><td>43</td><td>03</td><td>96</td><td>97</td><td>24</td></tr><tr><td>79</td><td>96</td><td>91</td><td><span style="color: #ff0000;">49</span></td><td><span style="color: #ff0000;">27</span></td><td><span style="color: #ff0000;">16</span></td></tr><tr><td>60</td><td><span style="color: #ff0000;">44</span></td><td>07</td><td>75</td><td>19</td><td><span style="color: #ff0000;">72</span></td></tr><tr> <td>39</td><td>21</td><td>15</td><td>58</td><td>17</td><td>17</td></tr><tr> <td>57</td><td>53</td><td>42</td><td>79</td><td>59</td><td>46</td></tr><tr> <td><span style="color: #ff0000;">88</span></td><td>71</td><td><span style="color: #ff0000;">38</span></td><td><span style="color: #ff0000;">33</span></td><td>18</td><td><span style="color: #ff0000;">27</span></td></tr><tr> <td><span style="color: #ff0000;">94</span></td><td>30</td><td>09</td><td>76</td><td><span style="color: #ff0000;">55</span></td><td>85</td></tr><tr> <td>58</td><td>51</td><td>75</td><td>92</td><td>60</td><td>04</td></tr><tr> <td>92</td><td>81</td><td>89</td><td>53</td><td>31</td><td>56</td></tr><tr> <td>52</td><td>20</td><td>21</td><td>37</td><td><span style="color: #ff0000;">11</span></td><td>04</td></tr><tr> <td><span style="color: #ff0000;">22</span></td><td><span style="color: #ff0000;">83</span></td><td><span style="color: #ff0000;">72</span></td><td><span style="color: #ff0000;">**</span></td><td>26</td><td>80</td></tr><tr> <td>41</td><td>96</td><td>25</td><td>54</td><td>20</td><td>52</td></tr><tr> <td><span style="color: #ff0000;">11</span></td><td>20</td><td>34</td><td>09</td><td>43</td><td>89</td></tr><tr> <td>91</td><td>84</td><td>13</td><td><span style="color: #ff0000;">00</span></td><td>02</td><td>29</td></tr><tr><td>41</td><td>74</td><td><span style="color: #ff0000;">55</span></td><td><span style="color: #ff0000;">38</span></td><td>35</td><td>36</td></tr><tr><td>70</td><td>60</td><td>21</td><td>91</td><td>48</td><td>20</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>65</td><td>65</td><td><span style="color: #ff0000;">**</span></td><td>39</td><td>92</td></tr><tr><td>15</td><td>53</td><td>26</td><td>06</td><td>32</td><td>95</td></tr><tr><td>53</td><td>19</td><td>65</td><td>68</td><td>26</td><td>06</td></tr><tr><td>75</td><td><span style="color: #ff0000;">**</span></td><td>85</td><td>82</td><td>78</td><td>93</td></tr><tr><td>36</td><td>68</td><td>81</td><td>19</td><td>39</td><td>14</td></tr><tr><td>98</td><td>41</td><td>14</td><td>65</td><td>06</td><td>85</td></tr><tr><td><span style="color: #ff0000;">88</span></td><td>40</td><td>76</td><td><span style="color: #ff0000;">88</span></td><td>65	</td><td>21 </td></tr><tr><td>98</td><td><span style="color: #ff0000;">11</span></td><td>40</td><td>04</td><td>79</td><td>81</td></tr><tr><td>07</td><td>81</td><td>28</td><td>09</td><td>01</td><td>92</td></tr><tr><td>29</td><td>67</td><td>50</td><td>42</td><td>75</td><td>31</td></tr><tr><td>47</td><td><span style="color: #ff0000;">44</span></td><td><span style="color: #ff0000;">11</span></td><td>17</td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>72</td><td>25</td><td>84</td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>62</td><td>59</td><td>87</td><td><span style="color: #ff0000;">11</span></td><td>94</td><td>15</td></tr><tr><td>13</td><td><span style="color: #ff0000;">44</span></td><td>92</td><td>02</td><td>31</td><td>80</td></tr><tr><td>98</td><td>61</td><td>02</td><td><span style="color: #ff0000;">55</span></td><td>30</td><td><span style="color: #ff0000;">55</span></td></tr><tr><td>01</td><td>76</td><td>98</td><td>59</td><td>48</td><td>24</td></tr><tr><td>58</td><td>04</td><td>41</td><td>12</td><td><span style="color: #ff0000;">77</span></td><td>51</td></tr><tr><td>47</td><td>64</td><td>04</td><td>58</td><td>21</td><td>52</td></tr><tr><td>69</td><td>02</td><td><span style="color: #ff0000;">27 </span></td><td>87</td><td>16</td><td>19</td></tr><tr><td>81</td><td><span style="color: #ff0000;">44</span></td><td>01</td><td><span style="color: #ff0000;">55</span></td><td>10</td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>24</td><td>14</td><td>51</td><td>15</td><td>31</td><td>57</td></tr><tr><td>60</td><td>13</td><td>97</td><td><span style="color: #ff0000;">**</span></td><td>84</td><td>86</td></tr><tr><td><span style="color: #ff0000;">33</span></td><td>38</td><td><span style="color: #ff0000;">55</span></td><td>72</td><td>28</td><td>25</td></tr><tr><td>61</td><td>14</td><td>39</td><td>05</td><td>37</td><td><span style="color: #ff0000;">99</span></td></tr><tr><td>62</td><td>90</td><td>92</td><td>73</td><td><span style="color: #ff0000;">77</span></td><td>31</td></tr><tr><td>62</td><td>90</td><td>16</td><td>96</td><td><span style="color: #ff0000;">33</span></td><td>20</td></tr><tr><td>67</td><td>08</td><td>76</td><td><span style="color: #ff0000;">11</span></td><td>09</td><td>57</td></tr><tr><td><span style="color: #ff0000;">16</span></td><td>43</td><td>19</td><td>80</td><td>06</td><td>65</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>19</td><td>25</td><td>46</td><td>73</td><td>67</td></tr><tr><td>86</td><td>46</td><td>94</td><td>64</td><td>41</td><td>68</td></tr><tr><td>78</td><td><span style="color: #ff0000;">05</span></td><td>39</td><td>67</td><td><span style="color: #ff0000;">44</span></td><td><span style="color: #ff0000;">83</span></td></tr><tr><td>41</td><td>12</td><td><span style="color: #ff0000;">55</span></td><td>12</td><td>86</td><td>80</td></tr><tr><td>46</td><td><span style="color: #ff0000;">33</span></td><td>57</td><td>31</td><td>12</td><td>59</td></tr><tr><td>01</td><td><span style="color: #ff0000;"> 49</span></td><td>72</td><td><span style="color: #ff0000;">77</span></td><td>56</td><td>82</td></tr><tr><td>41</td><td>36</td><td>90</td><td><span style="color: #ff0000;">88</span></td><td><span style="color: #ff0000;">55</span></td><td>67</td></tr><tr><td><span style="color: #ff0000;"> 33</span></td><td>04</td><td>87</td><td>81</td><td>96</td><td>71</td></tr><tr><td>42</td><td>59</td><td>08</td><td>74</td><td>53</td><td>01</td></tr><tr><td>48</td><td>78</td><td>04</td><td>02</td><td>87</td><td>08</td></tr><tr><td>21</td><td>04</td><td>19</td><td>82</td><td>86</td><td>13</td></tr><tr><td>02</td><td>52</td><td><span style="color: #ff0000;">05</span></td><td>41</td><td>07</td><td><span style="color: #ff0000;">77</span></td></tr><tr><td><span style="color: #ff0000;">49</span></td><td>87</td><td><span style="color: #ff0000;">99</span></td><td><span style="color: #ff0000;">11</span></td><td>01</td><td>40</td></tr><tr><td><span style="color: #ff0000;">11</span></td><td>87</td><td>48</td><td>57</td><td>81</td><td>85</td></tr><tr><td>30</td><td>62</td><td>19</td><td>73</td><td><span style="color: #ff0000;">94</span></td><td>43</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>53</td><td><span style="color: #ff0000;">72</span></td><td>13</td><td>30</td><td><span style="color: #ff0000;">61</span></td></tr><tr><td>95</td><td>35</td><td>32</td><td>08</td><td>95</td><td>37</td></tr><tr><td>45</td><td>34</td><td>85</td><td>71</td><td>64</td><td>15</td></tr><tr><td>10</td><td>87</td><td>43</td><td>35</td><td>08</td><td>62</td></tr><tr><td>07</td><td>51</td><td><span style="color: #ff0000;">22</span></td><td>46</td><td><span style="color: #ff0000;">33</span></td><td><span style="color: #ff0000;">50</span></td></tr><tr><td>12</td><td>80</td><td>35</td><td><span style="color: #ff0000;">33</span></td><td><span style="color: #ff0000;">27</span></td><td><span style="color: #ff0000;">55</span></td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>10</td><td>97</td><td>18</td><td><span style="color: #ff0000;">16</span></td><td>34</td></tr><tr><td><span style="color: #ff0000;">83</span></td><td><span style="color: #ff0000;">**</span></td><td>47</td><td>76</td><td>70</td><td>32</td></tr><tr><td>13</td><td>80</td><td>15</td><td>75</td><td>85</td><td><span style="color: #ff0000;">**</span></td></tr><tr><td><span style="color: #ff0000;">72</span></td><td>57</td><td>20</td><td><span style="color: #ff0000;">16</span></td><td>48</td><td>46</td></tr><tr><td><span style="color: #ff0000;">27</span></td><td>93</td><td><span style="color: #ff0000;">05</span></td><td>54</td><td>96</td><td>36</td></tr><tr><td>63</td><td>80</td><td>30</td><td>98</td><td>09</td><td>89</td></tr><tr><td>26</td><td>39</td><td>86</td><td>92</td><td>62</td><td>67</td></tr><tr><td>76</td><td><span style="color: #ff0000;">50</span></td><td>62</td><td>15</td><td><span style="color: #ff0000;">50</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>25</td><td><span style="color: #ff0000;">16</span></td><td>39</td><td>39</td><td>79</td><td>37</td></tr><tr><td><span style="color: #ff0000;">88</span></td><td>64</td><td><span style="color: #ff0000;">83</span></td><td>64</td><td>14</td><td>93</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td>86</td><td>18</td><td>43</td><td>31</td></tr><tr><td>14</td><td><span style="color: #ff0000;">00</span></td><td>39</td><td><span style="color: #ff0000;">88</span></td><td>07</td><td>51</td></tr><tr><td>23</td><td>10</td><td>93</td><td>74</td><td><span style="color: #ff0000;">44</span></td><td>34</td></tr><tr><td><span style="color: #ff0000;">72</span></td><td>35</td><td>45</td><td>45</td><td>03</td><td>54</td></tr><tr><td>08</td><td>37</td><td>84</td><td>79</td><td>68</td><td>12</td></tr><tr><td><span style="color: #ff0000;">61</span></td><td>67</td><td><span style="color: #ff0000;">33</span></td><td>60</td><td><span style="color: #ff0000;">22</span></td><td>68</td></tr><tr><td><span style="color: #ff0000;">33</span></td><td>37</td><td>84</td><td><span style="color: #ff0000;">44</span></td><td>95</td><td><span style="color: #ff0000;">83</span></td></tr><tr><td>47</td><td>59</td><td>29</td><td>98</td><td><span style="color: #ff0000;">33</span></td><td><span style="color: #ff0000;">00</span></td></tr><tr><td>46</td><td>74</td><td>82</td><td>91</td><td>21</td><td>48</td></tr><tr><td>56</td><td>19</td><td>84</td><td>62</td><td>73</td><td>12</td></tr><tr><td><span style="color: #ff0000;">33</span></td><td>70</td><td>24</td><td>45</td><td>15</td><td>31</td></tr><tr><td>25</td><td>32</td><td>04</td><td><span style="color: #ff0000;">83</span></td><td>28</td><td>79</td></tr><tr><td>01</td><td>10</td><td>43</td><td>51</td><td>45</td><td>31</td></tr><tr><td><span style="color: #ff0000;">99</span></td><td>52</td><td>96</td><td><span style="color: #ff0000;">00</span></td><td><span style="color: #ff0000;">**</span></td><td>41</td></tr><tr><td><span style="color: #ff0000;">22</span></td><td>14</td><td>75</td><td>21</td><td>42</td><td>43</td></tr><tr><td>06</td><td><span style="color: #ff0000;">94</span></td><td><span style="color: #ff0000;">49</span></td><td>26</td><td>96</td><td><span style="color: #ff0000;">22</span></td></tr><tr><td>60</td><td><span style="color: #ff0000;">00</span></td><td>70</td><td><span style="color: #ff0000;">49</span></td><td>13</td><td>29</td></tr><tr><td>01</td><td>43</td><td>02</td><td>10</td><td><span style="color: #ff0000;">61</span></td><td>73</td></tr><tr><td><span style="color: #ff0000;">72</span></td><td>07</td><td><span style="color: #ff0000;">16</span></td><td>79</td><td><span style="color: #ff0000;">**</span></td><td>97</td></tr><tr><td>69</td><td>60</td><td>95</td><td><span style="color: #ff0000;">99</span></td><td>02</td><td>29</td></tr><tr><td>30</td><td>25</td><td>63</td><td>35</td><td><span style="color: #ff0000;">66</span></td><td>97</td></tr><tr><td>32</td><td>84</td><td>67</td><td>98</td><td>56</td><td>76</td></tr><tr><td>81</td><td>56</td><td>45</td><td>67</td><td>13</td><td><span style="color: #ff0000;">50</span></td></tr><tr><td><span style="color: #ff0000;">66</span></td><td>59</td><td><span style="color: #ff0000;">72</span></td><td>70</td><td>23</td><td>39</td></tr><tr><td><span style="color: #ff0000;">27</span></td><td><span style="color: #ff0000;">44</span></td><td>62</td><td>04</td><td>07</td><td>15</td></tr><tr><td>86</td><td>29</td><td>02</td><td>03</td><td>15</td><td>19</td></tr><tr><td>06</td><td>69</td><td><span style="color: #ff0000;">05</span></td><td>97</td><td>02</td><td>65</td></tr><tr><td>95</td><td><span style="color: #ff0000;">11</span></td><td>95</td><td>87</td><td><span style="color: #ff0000;">44</span></td><td>63</td></tr><tr><td>23</td><td><span style="color: #ff0000;">05</span></td><td>43</td><td>86</td><td>54</td><td>90</td></tr><tr><td><span style="color: #ff0000;">61</span></td><td>48</td><td>04</td><td>91</td><td>86</td><td>86</td></tr><tr><td>69</td><td>13</td><td>87</td><td><span style="color: #ff0000;">50</span></td><td><span style="color: #ff0000;">27</span></td><td>14</td></tr><tr><td>69</td><td>48</td><td>40</td><td>04</td><td>80</td><td><span style="color: #ff0000;">16</span></td></tr><tr><td>41</td><td>48</td><td>36</td><td>68</td><td>87</td><td>52</td></tr><tr><td>23</td><td>90</td><td>15</td><td>28</td><td><span style="color: #ff0000;">99</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>35</td><td><span style="color: #ff0000;">88</span></td><td>64</td><td>07</td><td><span style="color: #ff0000;">83</span></td><td>52</td></tr><tr><td><span style="color: #ff0000;">72</span></td><td>76</td><td>03</td><td>78</td><td>70</td><td>60</td></tr><tr><td>53</td><td>09</td><td><span style="color: #ff0000;">05</span></td><td><span style="color: #ff0000;">72</span></td><td>23</td><td>87</td></tr><tr><td>06</td><td>87</td><td><span style="color: #ff0000;">72</span></td><td>93</td><td>19</td><td>97</td></tr><tr><td>07</td><td>81</td><td>80</td><td>63</td><td>59</td><td>39</td></tr><tr><td>75</td><td><span style="color: #ff0000;">55</span></td><td><span style="color: #ff0000;">55</span></td><td><span style="color: #ff0000;">66</span></td><td>07</td><td><span style="color: #ff0000;">44</span></td></tr><tr><td>89</td><td>52</td><td>15</td><td>76</td><td><span style="color: #ff0000;">11</span></td><td>30</td></tr><tr><td>48</td><td><span style="color: #ff0000;">22</span></td><td>10</td><td>39</td><td>90</td><td>47</td></tr><tr><td>06</td><td>70</td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">11</span></td><td><span style="color: #ff0000;">22</span></td><td>12</td></tr><tr><td><span style="color: #ff0000;">38</span></td><td>85</td><td><span style="color: #ff0000;">72</span></td><td>39</td><td>35</td><td>37</td></tr><tr><td>87</td><td>75</td><td>28</td><td>18</td><td>06</td><td>71</td></tr><tr><td><span style="color: #ff0000;">22</span></td><td><span style="color: #ff0000;">05</span></td><td>40</td><td>10</td><td>31</td><td>69</td></tr><tr><td>56</td><td>46</td><td>18</td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">44</span></td><td>62</td></tr><tr><td>18</td><td><span style="color: #ff0000;">99</span></td><td><span style="color: #ff0000;">55</span></td><td>47</td><td><span style="color: #ff0000;">99</span></td><td>03</td></tr><tr><td>96</td><td>39</td><td>84</td><td>93</td><td>19</td><td>59</td></tr><tr><td>95</td><td>36</td><td>96</td><td>54</td><td>21</td><td>32</td></tr><tr><td>03</td><td><span style="color: #ff0000;">49</span></td><td>46</td><td>14</td><td>29</td><td><span style="color: #ff0000;">27</span></td></tr><tr><td>68</td><td><span style="color: #ff0000;">38</span></td><td>95</td><td>75</td><td>54</td><td>04</td></tr><tr><td>09</td><td>42</td><td>73</td><td>67</td><td><span style="color: #ff0000;">50</span></td><td>70</td></tr><tr><td><span style="color: #ff0000;">55</span></td><td>91</td><td><span style="color: #ff0000;">61</span></td><td>82</td><td>18</td><td>23</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>31</td><td><span style="color: #ff0000;">22</span></td><td><span style="color: #ff0000;">49</span></td><td>03</td><td>52</td><td>58</td></tr><tr><td>12</td><td>09</td><td><span style="color: #ff0000;">22</span></td><td>65</td><td>53</td><td>40</td></tr><tr><td><span style="color: #ff0000;">44</span></td><td>42</td><td>93</td><td>89</td><td><span style="color: #ff0000;">22</span></td><td>08</td></tr><tr><td><span style="color: #ff0000;">88</span></td><td>74</td><td><span style="color: #ff0000;">55</span></td><td>34</td><td>78</td><td>71</td></tr><tr><td>46</td><td><span style="color: #ff0000;">22</span></td><td>70</td><td><span style="color: #ff0000;">16</span></td><td><span style="color: #ff0000;">05</span></td><td>04</td></tr><tr><td>32</td><td>21</td><td>65</td><td>69</td><td>19</td><td>89</td></tr><tr><td>68</td><td>57</td><td>87</td><td>30</td><td><span style="color: #ff0000;">94</span></td><td><span style="color: #ff0000;">88</span></td></tr><tr><td><span style="color: #ff0000;">49</span></td><td>98</td><td>91</td><td>13</td><td><span style="color: #ff0000;">27</span></td><td>76</td></tr><tr><td><span style="color: #ff0000;">72</span></td><td>03</td><td>20</td><td>59</td><td>03</td><td>74</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>60</td><td>47</td><td>04</td><td><span style="color: #ff0000;">66</span></td><td>80</td></tr><tr><td>34</td><td>71</td><td>64</td><td><span style="color: #ff0000;">22</span></td><td>25</td><td><span style="color: #ff0000;">**</span></td></tr><tr><td><span style="color: #ff0000;">38</span></td><td><span style="color: #ff0000;">66</span></td><td>67</td><td><span style="color: #ff0000;">05</span></td><td>13</td><td><span style="color: #ff0000;">44</span></td></tr><tr><td>56</td><td>31</td><td>20</td><td><span style="color: #ff0000;">27</span></td><td>63</td><td>81</td></tr><tr><td>12</td><td>85</td><td>29</td><td>13</td><td>96</td><td>79</td></tr><tr><td><span style="color: #ff0000;">38</span></td><td>37</td><td>82</td><td>18</td><td><span style="color: #ff0000;">88</span></td><td>71</td></tr><tr><td>67</td><td>59</td><td>30</td><td>24</td><td>13</td><td><span style="color: #ff0000;">94</span></td></tr><tr><td>47</td><td><span style="color: #ff0000;">11</span></td><td>15</td><td>92</td><td><span style="color: #ff0000;">00</span></td><td><span style="color: #ff0000;">44</span></td></tr><tr><td>23</td><td><span style="color: #ff0000;">11</span></td><td><span style="color: #ff0000;">94</span></td><td>87</td><td>46</td><td>87</td></tr><tr><td><span style="color: #ff0000;">38</span></td><td>90</td><td>80</td><td><span style="color: #ff0000;">**</span></td><td>25</td><td>40</td></tr><tr><td>95</td><td>46</td><td>57</td><td>79</td><td>23</td><td>57</td></tr><tr><td>28</td><td>34</td><td>21</td><td>73</td><td>60</td><td>84</td></tr><tr><td>92</td><td>47</td><td>91</td><td>30</td><td>10</td><td>45</td></tr><tr><td>09</td><td>08</td><td>90</td><td>67</td><td>70</td><td>14</td></tr><tr><td>59</td><td>60</td><td>21</td><td>78</td><td>64</td><td>39</td></tr><tr><td>46</td><td>21</td><td>19</td><td>65</td><td>06</td><td>34</td></tr><tr><td>56</td><td>32</td><td>71</td><td>21</td><td>98</td><td>97</td></tr><tr><td>04</td><td>18</td><td>62</td><td>53</td><td>36</td><td>23</td></tr><tr><td><span style="color: #ff0000;">44</span></td><td>86</td><td><span style="color: #ff0000;">05</span></td><td>52</td><td>15</td><td>53</td></tr><tr><td>13</td><td>86</td><td>45</td><td>42</td><td><span style="color: #ff0000;">88</span></td><td>35</td></tr><tr><td>15</td><td>78</td><td>54</td><td>93</td><td>47</td><td>79</td></tr><tr><td><span style="color: #ff0000;">72</span></td><td>18</td><td><span style="color: #ff0000;">27</span></td><td><span style="color: #ff0000;">88</span></td><td>43</td><td>57</td></tr><tr><td>52</td><td>95</td><td>93</td><td><span style="color: #ff0000;">61</span></td><td>09</td><td>41</td></tr><tr><td>78</td><td><span style="color: #ff0000;">83</span></td><td><span style="color: #ff0000;">55</span></td><td>74</td><td><span style="color: #ff0000;">11</span></td><td><span style="color: #ff0000;">44</span></td></tr><tr><td>70</td><td>67</td><td>32</td><td>19</td><td>43</td><td>65</td></tr><tr><td>97</td><td>62</td><td><span style="color: #ff0000;">94</span></td><td>97</td><td>56</td><td>24</td></tr><tr><td><span style="color: #ff0000;">83</span></td><td>20</td><td>36</td><td>43</td><td>03</td><td><span style="color: #ff0000;">22</span></td></tr><tr><td>89</td><td><span style="color: #ff0000;">**</span></td><td>86</td><td>81</td><td>78</td><td>86</td></tr><tr><td>02</td><td>92</td><td>29</td><td>42</td><td><span style="color: #ff0000;">22</span></td><td>54</td></tr><tr><td>48</td><td>82</td><td>95</td><td>67</td><td>25</td><td>14</td></tr><tr><td>73</td><td><span style="color: #ff0000;">11</span></td><td>43</td><td><span style="color: #ff0000;">**</span></td><td>98</td><td><span style="color: #ff0000;">61</span></td></tr><tr><td>93</td><td>78</td><td>73</td><td><span style="color: #ff0000;">00</span></td><td>53</td><td><span style="color: #ff0000;">61</span></td></tr><tr><td>19</td><td>02</td><td><span style="color: #ff0000;">11</span></td><td>81</td><td>60</td><td>02</td></tr><tr><td><span style="color: #ff0000;">05</span></td><td><span style="color: #ff0000;">**</span></td><td>25</td><td>04</td><td>04</td><td><span style="color: #ff0000;">55</span></td></tr><tr><td>39</td><td><span style="color: #ff0000;">00</span></td><td>04</td><td><span style="color: #ff0000;">88</span></td><td><span style="color: #ff0000;">77</span></td><td>03</td></tr><tr><td>26</td><td>71</td><td>31</td><td>10</td><td>60</td><td>29</td></tr><tr><td>25</td><td>23</td><td>73</td><td><span style="color: #ff0000;">61</span></td><td>74</td><td>46</td></tr><tr><td>58</td><td>53</td><td>48</td><td><span style="color: #ff0000;">05</span></td><td><span style="color: #ff0000;">33</span></td><td>76</td></tr><tr><td>85</td><td>41</td><td>47</td><td>69</td><td>91</td><td>69</td></tr><tr><td>14</td><td>63</td><td>81</td><td>57</td><td>51</td><td>97</td></tr><tr><td>57</td><td>90</td><td>96</td><td>07</td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>73</td><td><span style="color: #ff0000;">77</span></td><td>90</td><td>41</td><td>97</td><td>87</td></tr><tr><td>35</td><td>46</td><td>14</td><td><span style="color: #ff0000;">77</span></td><td><span style="color: #ff0000;">05</span></td><td>71</td></tr><tr><td>14</td><td>30</td><td>06</td><td>28</td><td>21</td><td>24</td></tr><tr><td>13</td><td><span style="color: #ff0000;">33</span></td><td>40</td><td>13</td><td>69</td><td>98</td></tr><tr><td>31</td><td>81</td><td>40</td><td>60</td><td>29</td><td>65</td></tr><tr><td>36</td><td>53</td><td>59</td><td>21</td><td>09</td><td>84</td></tr><tr><td>10</td><td>14</td><td>35</td><td><span style="color: #ff0000;">16</span></td><td>46</td><td>21</td></tr><tr><td>34</td><td>59</td><td>06</td><td>26</td><td>86</td><td>97</td></tr><tr><td>68</td><td><span style="color: #ff0000;">50</span></td><td><span style="color: #ff0000;">27</span></td><td>82</td><td><span style="color: #ff0000;">50</span></td><td>12</td></tr><tr><td>59</td><td>03</td><td>39</td><td>24</td><td>86</td><td>25</td></tr><tr><td><span style="color: #ff0000;">77</span></td><td>95</td><td>57</td><td>08</td><td>03</td><td>03</td></tr><tr><td>82</td><td>31</td><td>17</td><td>35</td><td>09</td><td>65</td></tr><tr><td>52</td><td>76</td><td>69</td><td>78</td><td>64</td><td><span style="color: #ff0000;">38</span></td></tr><tr><td>08</td><td>28</td><td>25</td><td>48</td><td>43</td><td>32</td></tr><tr><td>10</td><td><span style="color: #ff0000;">77</span></td><td>25</td><td><span style="color: #ff0000;">05</span></td><td>13</td><td>03</td></tr><tr><td>12</td><td><span style="color: #ff0000;">44</span></td><td><span style="color: #ff0000;">38</span></td><td>87</td><td>91</td><td>08</td></tr><tr><td>70</td><td><span style="color: #ff0000;">77</span></td><td>75</td><td>51</td><td>45</td><td>04</td></tr><tr><td>69</td><td>20</td><td><span style="color: #ff0000;">11</span></td><td><span style="color: #ff0000;">88</span></td><td>12</td><td><span style="color: #ff0000;">61</span></td></tr><tr><td><span style="color: #ff0000;">55</span></td><td><span style="color: #ff0000;">**</span></td><td>06</td><td>36</td><td>40</td><td>43</td></tr><tr><td>90</td><td>02</td><td>91</td><td>19</td><td>09</td><td>51</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>47</td><td>82</td><td>80</td><td>34</td><td>98</td></tr><tr><td><span style="color: #ff0000;">55</span></td><td><span style="color: #ff0000;">50</span></td><td><span style="color: #ff0000;">83</span></td><td>19</td><td>51</td><td><span style="color: #ff0000;">88</span></td></tr><tr><td>97</td><td>53</td><td>08</td><td>60</td><td>54</td><td><span style="color: #ff0000;">49</span></td></tr><tr><td>86</td><td>52</td><td><span style="color: #ff0000;">38</span></td><td>51</td><td>34</td><td>30</td></tr><tr><td>18</td><td><span style="color: #ff0000;">50</span></td><td>75</td><td>53</td><td>84</td><td>68</td></tr><tr><td>17</td><td>70</td><td>86</td><td>26</td><td>60</td><td>64</td></tr><tr><td>82</td><td>52</td><td>23</td><td>96</td><td>32</td><td>73</td></tr><tr><td>54</td><td>30</td><td>04</td><td><span style="color: #ff0000;">11</span></td><td>39</td><td>06</td></tr><tr><td>64</td><td>12</td><td>30</td><td>48</td><td>75</td><td>78</td></tr><tr><td>95</td><td><span style="color: #ff0000;">50</span></td><td>93</td><td>29</td><td>37</td><td>75</td></tr><tr><td>58</td><td>23</td><td>56</td><td><span style="color: #ff0000;">61</span></td><td><span style="color: #ff0000;">72</span></td><td>51</td></tr><tr><td>17</td><td><span style="color: #ff0000;">55</span></td><td>62</td><td>19</td><td>14</td><td>93</td></tr><tr><td>84</td><td>87</td><td>17</td><td>39</td><td>20</td><td><span style="color: #ff0000;">**</span></td></tr><tr><td><span style="color: #ff0000;">55</span></td><td><span style="color: #ff0000;">33</span></td><td>63</td><td><span style="color: #ff0000;">77</span></td><td>13</td><td>13</td></tr><tr><td>57</td><td>74</td><td>56</td><td>20</td><td>64</td><td>14</td></tr><tr><td>51</td><td>58</td><td>87</td><td>12</td><td><span style="color: #ff0000;">27</span></td><td>85</td></tr><tr><td>68</td><td>14</td><td>76</td><td>90</td><td>82</td><td>10</td></tr><tr><td>14</td><td>53</td><td>26</td><td><span style="color: #ff0000;">88</span></td><td><span style="color: #ff0000;">27</span></td><td>60</td></tr><tr><td>65</td><td>17</td><td>12</td><td>04</td><td>91</td><td>28</td></tr><tr><td>69</td><td>90</td><td>98</td><td>18</td><td>68</td><td>14</td></tr><tr><td>84</td><td>51</td><td>31</td><td>73</td><td>97</td><td>86</td></tr><tr><td>84</td><td>15</td><td>02</td><td>36</td><td>30</td><td>80</td></tr><tr><td>47</td><td>86</td><td>90</td><td>76</td><td><span style="color: #ff0000;">16</span></td><td>64</td></tr><tr><td>78</td><td><span style="color: #ff0000;">83</span></td><td>31</td><td>91</td><td>09</td><td>26</td></tr><tr><td>73</td><td>93</td><td><span style="color: #ff0000;">49</span></td><td>37</td><td><span style="color: #ff0000;">83</span></td><td>42</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td>20</td><td>01</td><td><span style="color: #ff0000;">94</span></td></tr><tr><td>40</td><td>12</td><td>18</td><td><span style="color: #ff0000;">22</span></td><td><span style="color: #ff0000;">99</span></td><td>28</td></tr><tr><td><span style="color: #ff0000;">16</span></td><td>60</td><td>09</td><td>12</td><td>79</td><td>78</td></tr><tr><td>93</td><td>70</td><td><span style="color: #ff0000;">33</span></td><td>69</td><td>73</td><td>07</td></tr><tr><td><span style="color: #ff0000;">33</span></td><td>79</td><td><span style="color: #ff0000;">94</span></td><td>43</td><td>26</td><td>73</td></tr><tr><td>85</td><td>13</td><td>30</td><td><span style="color: #ff0000;">05</span></td><td>14</td><td>54</td></tr><tr><td>56</td><td><span style="color: #ff0000;">05</span></td><td><span style="color: #ff0000;">83</span></td><td>08</td><td>30</td><td><span style="color: #ff0000;">44</span></td></tr><tr><td><span style="color: #ff0000;">38</span></td><td>73</td><td>91</td><td><span style="color: #ff0000;">22</span></td><td><span style="color: #ff0000;">27</span></td><td><span style="color: #ff0000;">22</span></td></tr><tr><td>08</td><td>75</td><td>26</td><td>09</td><td><span style="color: #ff0000;">50</span></td><td><span style="color: #ff0000;">44</span></td></tr><tr><td>07</td><td><span style="color: #ff0000;">05</span></td><td>06</td><td>42</td><td>25</td><td>21</td></tr><tr><td><span style="color: #ff0000;">55</span></td><td><span style="color: #ff0000;">**</span></td><td>24</td><td>82</td><td><span style="color: #ff0000;">16</span></td><td>52</td></tr><tr><td>51</td><td><span style="color: #ff0000;">22</span></td><td>09</td><td>95</td><td>19</td><td>62</td></tr><tr><td>64</td><td>54</td><td>64</td><td>43</td><td>53</td><td>15</td></tr><tr><td>08</td><td>12</td><td><span style="color: #ff0000;">61</span></td><td>79</td><td>43</td><td>52</td></tr><tr><td>46</td><td>81</td><td><span style="color: #ff0000;">33</span></td><td><span style="color: #ff0000;">33</span></td><td>24</td><td>28</td></tr><tr><td>19</td><td>23</td><td>30</td><td>04</td><td>87</td><td>75</td></tr><tr><td><span style="color: #ff0000;">72</span></td><td>69</td><td>71</td><td><span style="color: #ff0000;">22</span></td><td>71</td><td>29</td></tr><tr><td><span style="color: #ff0000;">88</span></td><td>86</td><td>70</td><td>95</td><td><span style="color: #ff0000;">49</span></td><td><span style="color: #ff0000;">05</span></td></tr><tr><td>43</td><td>69</td><td>47</td><td>40</td><td>75</td><td>47</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td>57</td><td>18</td><td>12</td><td><span style="color: #ff0000;">83</span></td><td>74</td></tr><tr><td><span style="color: #ff0000;">00</span></td><td><span style="color: #ff0000;">94</span></td><td>97</td><td><span style="color: #ff0000;">27</span></td><td>92</td><td>28</td></tr><tr><td>62</td><td>64</td><td><span style="color: #ff0000;">50</span></td><td><span style="color: #ff0000;">88</span></td><td>47</td><td><span style="color: #ff0000;">66</span></td></tr><tr><td>95</td><td>07</td><td><span style="color: #ff0000;">88</span></td><td>13</td><td><span style="color: #ff0000;">27</span></td><td>95</td></tr><tr><td><span style="color: #ff0000;">11</span></td><td>86</td><td>98</td><td><span style="color: #ff0000;">94</span></td><td>25</td><td>93</td></tr><tr><td>08</td><td>02</td><td>31</td><td>69</td><td>25</td><td>97</td></tr><tr><td>85</td><td>02</td><td>23</td><td>26</td><td>91</td><td>39</td></tr><tr><td>79</td><td><span style="color: #ff0000;">38</span></td><td>78</td><td>40</td><td>84</td><td>54</td></tr><tr><td><span style="color: #ff0000;">99</span></td><td>36</td><td><span style="color: #ff0000;">61</span></td><td>81</td><td>57</td><td><span style="color: #ff0000;">11</span></td></tr><tr><td><span style="color: #ff0000;">99</span></td><td>32</td><td>59</td><td>86</td><td><span style="color: #ff0000;">11</span></td><td>15</td></tr><tr><td><span style="color: #ff0000;">00</span></td><td>67</td><td>31</td><td>39</td><td>31</td><td>80</td></tr><tr><td>67</td><td>36</td><td>10</td><td>09</td><td>47</td><td>52</td></tr><tr><td><span style="color: #ff0000;">61</span></td><td>30</td><td>34</td><td>43</td><td>73</td><td>31</td></tr><tr><td>08</td><td>43</td><td>62</td><td><span style="color: #ff0000;">50</span></td><td>48</td><td>82</td></tr><tr><td><span style="color: #ff0000;">88</span></td><td>06</td><td><span style="color: #ff0000;">50</span></td><td>35</td><td>90</td><td><span style="color: #ff0000;">49</span></td></tr><tr><td>28</td><td>31</td><td>24</td><td>62</td><td>96</td><td>46</td></tr><tr><td>84</td><td>08</td><td>58</td><td>36</td><td>25</td><td>56</td></tr><tr><td><span style="color: #ff0000;">88</span></td><td><span style="color: #ff0000;">49</span></td><td><span style="color: #ff0000;">22</span></td><td><span style="color: #ff0000;">99</span></td><td>70</td><td>84</td></tr><tr><td><span style="color: #ff0000;">33</span></td><td>29</td><td>34</td><td><span style="color: #ff0000;">66</span></td><td>20</td><td>71</td></tr><tr><td><span style="color: #ff0000;">05</span></td><td>25</td><td>02</td><td>14</td><td>84</td><td>73</td></tr><tr><td>68</td><td><span style="color: #ff0000;">61</span></td><td>04</td><td>04</td><td><span style="color: #ff0000;">66</span></td><td><span style="color: #ff0000;">94</span></td></tr><tr><td>28</td><td><span style="color: #ff0000;">38</span></td><td><span style="color: #ff0000;">00</span></td><td>73</td><td>93</td><td>06</td></tr><tr><td>57</td><td>02</td><td>03</td><td>37</td><td>91</td><td>75</td></tr><tr><td>56</td><td>35</td><td>68</td><td>56</td><td>01</td><td><span style="color: #ff0000;">**</span></td></tr><tr><td>51</td><td>81</td><td>85</td><td>91</td><td>12</td><td>67</td></tr><tr><td>59</td><td>23</td><td>73</td><td>53</td><td>41</td><td>81</td></tr><tr><td>58</td><td><span style="color: #ff0000;">99</span></td><td><span style="color: #ff0000;">44</span></td><td>31</td><td><span style="color: #ff0000;">38</span></td><td>91</td></tr><tr><td>74</td><td><span style="color: #ff0000;">16</span></td><td>93</td><td>89</td><td>29</td><td><span style="color: #ff0000;">94</span></td></tr><tr><td>08</td><td>67</td><td><span style="color: #ff0000;">88</span></td><td>65</td><td>86</td><td><span style="color: #ff0000;">38</span></td></tr><tr><td><span style="color: #ff0000;">27</span></td><td>79</td><td>64</td><td>39</td><td>09</td><td>53</td></tr><tr><td>59</td><td>47</td><td>87</td><td>40</td><td>58</td><td>10</td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">**</span></td></tr><tr><td><span style="color: #ff0000;">**</span></td><td><span style="color: #ff0000;">88</span></td><td>07</td><td><span style="color: #ff0000;">27</span></td><td>84</td><td>20</td></tr><tr><td>10</td><td>04</td><td><span style="color: #ff0000;">83</span></td><td>60</td><td>29</td><td>07</td></tr><tr><td>78</td><td>29</td><td>41</td><td>06</td><td>48</td><td>63</td></tr><tr><td>48</td><td>34</td><td>89</td><td>28</td><td>71</td><td>63</td></tr><tr><td><span style="color: #ff0000;">77</span></td><td><span style="color: #ff0000;">72</span></td><td>64</td><td>17</td><td><span style="color: #ff0000;">16</span></td><td>76</td></tr><tr><td>17</td><td>02</td><td>60</td><td>87</td><td>20</td><td>89</td></tr><tr><td>47</td><td>97</td><td>13</td><td>82</td><td><span style="color: #ff0000;">00</span></td><td><span style="color: #ff0000;">38</span></td></tr><tr><td>15</td><td><span style="color: #ff0000;">49</span></td><td>76</td><td><span style="color: #ff0000;">61</span></td><td><span style="color: #ff0000;">99</span></td><td>60</td></tr><tr><td>63</td><td>04</td><td>42</td><td>12</td><td>31</td><td><span style="color: #ff0000;">38</span></td></tr><tr><td>51</td><td>10</td><td>96</td><td>57</td><td><span style="color: #ff0000;">66</span></td><td>23</td></tr><tr><td><span style="color: black;">81</span></td><td><span style="color: black;">09</span></td><td><span style="color: black;">51</span></td><td><span style="color: black;">**</span></td><td><span style="color: black;">51</span></td><td><span style="color: black;">59</span></td></tr><tr><td><span style="color: black;">42</span></td><td><span style="color: red;">72</span></td><td><span style="color: #000000;">**</span></td><td><span style="color: black;">76</span></td><td><span style="color: black;">28</span></td><td><span style="color: black;">14</span></td></tr><tr><td><span style="color: black;">13</span></td><td><span style="color: black;">34</span></td><td><span style="color: black;">46</span></td><td><span style="color: black;">37</span></td><td><span style="color: red;">44</span></td><td><span style="color: red;">27</span></td></tr><tr><td><span style="color: red;">50</span></td><td><span style="color: black;">42</span></td><td><span style="color: black;">84</span></td><td><span style="color: black;">70</span></td><td><span style="color: black;">03</span></td><td><span style="color: black;">29</span></td></tr><tr><td><span style="color: black;">89</span></td><td><span style="color: red;">05</span></td><td><span style="color: red;">66</span></td><td><span style="color: red;">50</span></td><td><span style="color: black;">32</span></td><td><span style="color: red;">77</span></td></tr><tr><td><span style="color: black;">56</span></td><td><span style="color: black;">26</span></td><td><span style="color: black;">04</span></td><td><span style="color: black;">35</span></td><td><span style="color: black;">92</span></td><td><span style="color: black;">67</span></td></tr><tr><td><span style="color: black;">71</span></td><td><span style="color: black;">23</span></td><td><span style="color: black;">12</span></td><td><span style="color: black;">62</span></td><td><span style="color: black;">15</span></td><td><span style="color: black;">81</span></td></tr><tr><td><span style="color: black;">86</span></td><td><span style="color: black;">20</span></td><td><span style="color: black;">39</span></td><td><span style="color: black;">87</span></td><td><span style="color: black;">81</span></td><td><span style="color: black;">17</span></td></tr>
+                                        <tr>
+                        <td>30</td>
+                        <td>73 </td>
+                        <td>81</td>
+                        <td>12</td>
+                        <td>**</td>
+                        <td>75</td>
+                    </tr>
+                                        <tr>
+                        <td>39</td>
+                        <td>75 </td>
+                        <td>40</td>
+                        <td>65</td>
+                        <td>14</td>
+                        <td>74</td>
+                    </tr>
+                                        <tr>
+                        <td>68</td>
+                        <td>45 </td>
+                        <td>95</td>
+                        <td>21</td>
+                        <td>62</td>
+                        <td><font color="red">27</font></td>
+                    </tr>
+                                        <tr>
+                        <td>12</td>
+                        <td>36 </td>
+                        <td>37</td>
+                        <td>09</td>
+                        <td>25</td>
+                        <td>90</td>
+                    </tr>
+                                        <tr>
+                        <td>52</td>
+                        <td>91 </td>
+                        <td>40</td>
+                        <td>03</td>
+                        <td>46</td>
+                        <td><font color="red">61</font></td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">27</font></td>
+                        <td>48 </td>
+                        <td>13</td>
+                        <td><font color="red">16</font></td>
+                        <td>82</td>
+                        <td>91</td>
+                    </tr>
+                                        <tr>
+                        <td>06</td>
+                        <td><font color="red">49</font> </td>
+                        <td>04</td>
+                        <td>25</td>
+                        <td>39</td>
+                        <td>29</td>
+                    </tr>
+                                        <tr>
+                        <td>76</td>
+                        <td>14 </td>
+                        <td>20</td>
+                        <td>51</td>
+                        <td>98</td>
+                        <td>17</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">72</font></td>
+                        <td>46 </td>
+                        <td>**</td>
+                        <td><font color="red">77</font></td>
+                        <td>89</td>
+                        <td>68</td>
+                    </tr>
+                                        <tr>
+                        <td>95</td>
+                        <td>89 </td>
+                        <td><font color="red">61</font></td>
+                        <td>74</td>
+                        <td>34</td>
+                        <td>03</td>
+                    </tr>
+                                        <tr>
+                        <td>91</td>
+                        <td>29 </td>
+                        <td>81</td>
+                        <td>13</td>
+                        <td>10</td>
+                        <td>28</td>
+                    </tr>
+                                        <tr>
+                        <td>81</td>
+                        <td>96 </td>
+                        <td>96</td>
+                        <td>26</td>
+                        <td>54</td>
+                        <td>23</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">77</font></td>
+                        <td>95 </td>
+                        <td>52</td>
+                        <td>41</td>
+                        <td>65</td>
+                        <td>51</td>
+                    </tr>
+                                        <tr>
+                        <td>03</td>
+                        <td><font color="red">88</font> </td>
+                        <td>37</td>
+                        <td><font color="red">77</font></td>
+                        <td>64</td>
+                        <td>42</td>
+                    </tr>
+                                        <tr>
+                        <td>40</td>
+                        <td><font color="red">72</font> </td>
+                        <td>81</td>
+                        <td>81</td>
+                        <td>70</td>
+                        <td>31</td>
+                    </tr>
+                                        <tr>
+                        <td>12</td>
+                        <td><font color="red">16</font> </td>
+                        <td>09</td>
+                        <td><font color="red">94</font></td>
+                        <td>85</td>
+                        <td>80</td>
+                    </tr>
+                                        <tr>
+                        <td>12</td>
+                        <td>93 </td>
+                        <td>56</td>
+                        <td><font color="red">00</font></td>
+                        <td><font color="red">49</font></td>
+                        <td>64</td>
+                    </tr>
+                                        <tr>
+                        <td>21</td>
+                        <td>79 </td>
+                        <td>48</td>
+                        <td>30</td>
+                        <td>52</td>
+                        <td>85</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">66</font></td>
+                        <td><font color="red">94</font> </td>
+                        <td>70</td>
+                        <td>13</td>
+                        <td>28</td>
+                        <td>89</td>
+                    </tr>
+                                        <tr>
+                        <td>13</td>
+                        <td>17 </td>
+                        <td><font color="red">50</font></td>
+                        <td>46</td>
+                        <td>96</td>
+                        <td>09</td>
+                    </tr>
+                                        <tr>
+                        <td>67</td>
+                        <td>54 </td>
+                        <td>41</td>
+                        <td><font color="red">44</font></td>
+                        <td>07</td>
+                        <td>43</td>
+                    </tr>
+                                        <tr>
+                        <td>43</td>
+                        <td><font color="red">77</font> </td>
+                        <td>75</td>
+                        <td><font color="red">72</font></td>
+                        <td>81</td>
+                        <td><font color="red">00</font></td>
+                    </tr>
+                                        <tr>
+                        <td>**</td>
+                        <td>95 </td>
+                        <td>53</td>
+                        <td>58</td>
+                        <td><font color="red">50</font></td>
+                        <td>23</td>
+                    </tr>
+                                        <tr>
+                        <td>07</td>
+                        <td>29 </td>
+                        <td>59</td>
+                        <td>65</td>
+                        <td>97</td>
+                        <td>82</td>
+                    </tr>
+                                        <tr>
+                        <td>21</td>
+                        <td>32 </td>
+                        <td>**</td>
+                        <td><font color="red">00</font></td>
+                        <td>13</td>
+                        <td>80</td>
+                    </tr>
+                                        <tr>
+                        <td>32</td>
+                        <td>82 </td>
+                        <td>84</td>
+                        <td>32</td>
+                        <td><font color="red">77</font></td>
+                        <td>26</td>
+                    </tr>
+                                        <tr>
+                        <td>87</td>
+                        <td>68 </td>
+                        <td>65</td>
+                        <td><font color="red">50</font></td>
+                        <td><font color="red">00</font></td>
+                        <td><font color="red">77</font></td>
+                    </tr>
+                                        <tr>
+                        <td>74</td>
+                        <td>59 </td>
+                        <td><font color="red">44</font></td>
+                        <td>14</td>
+                        <td>28</td>
+                        <td>63</td>
+                    </tr>
+                                        <tr>
+                        <td>51</td>
+                        <td>63 </td>
+                        <td>60</td>
+                        <td>25</td>
+                        <td>68</td>
+                        <td>21</td>
+                    </tr>
+                                        <tr>
+                        <td>01</td>
+                        <td>90 </td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>35</td>
+                        <td>28</td>
+                    </tr>
+                                        <tr>
+                        <td>48</td>
+                        <td>15 </td>
+                        <td>96</td>
+                        <td>95</td>
+                        <td>41</td>
+                        <td>84</td>
+                    </tr>
+                                        <tr>
+                        <td>14</td>
+                        <td>12 </td>
+                        <td>22</td>
+                        <td>17</td>
+                        <td>62</td>
+                        <td>**</td>
+                    </tr>
+                                        <tr>
+                        <td>**</td>
+                        <td>** </td>
+                        <td>**</td>
+                        <td>**</td>
+                        <td>**</td>
+                        <td>**</td>
+                    </tr>
+                                        <tr>
+                        <td>79</td>
+                        <td>78 </td>
+                        <td>26</td>
+                        <td>07</td>
+                        <td>46</td>
+                        <td>19</td>
+                    </tr>
+                                        <tr>
+                        <td>47</td>
+                        <td><font color="red">11</font> </td>
+                        <td><font color="red">99</font></td>
+                        <td><font color="red">11</font></td>
+                        <td><font color="red">50</font></td>
+                        <td>98</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">05</font></td>
+                        <td>07 </td>
+                        <td><font color="red">94</font></td>
+                        <td>59</td>
+                        <td>80</td>
+                        <td>81</td>
+                    </tr>
+                                        <tr>
+                        <td>45</td>
+                        <td>40 </td>
+                        <td>34</td>
+                        <td>36</td>
+                        <td>32</td>
+                        <td>85</td>
+                    </tr>
+                                        <tr>
+                        <td>60</td>
+                        <td>12 </td>
+                        <td>28</td>
+                        <td>63</td>
+                        <td>89</td>
+                        <td>64</td>
+                    </tr>
+                                        <tr>
+                        <td>39</td>
+                        <td>60 </td>
+                        <td>63</td>
+                        <td>57</td>
+                        <td>13</td>
+                        <td>34</td>
+                    </tr>
+                                        <tr>
+                        <td>65</td>
+                        <td>87 </td>
+                        <td><font color="red">22</font></td>
+                        <td>30</td>
+                        <td>56</td>
+                        <td>91</td>
+                    </tr>
+                                        <tr>
+                        <td>63</td>
+                        <td>14 </td>
+                        <td>81</td>
+                        <td>02</td>
+                        <td>17</td>
+                        <td>08</td>
+                    </tr>
+                                        <tr>
+                        <td>45</td>
+                        <td>39 </td>
+                        <td>71</td>
+                        <td>06</td>
+                        <td>60</td>
+                        <td>60</td>
+                    </tr>
+                                        <tr>
+                        <td>26</td>
+                        <td>04 </td>
+                        <td>70</td>
+                        <td>96</td>
+                        <td>81</td>
+                        <td>07</td>
+                    </tr>
+                                        <tr>
+                        <td>59</td>
+                        <td>07 </td>
+                        <td>03</td>
+                        <td>54</td>
+                        <td>92</td>
+                        <td>97</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">00</font></td>
+                        <td>25 </td>
+                        <td>43</td>
+                        <td>71</td>
+                        <td>29</td>
+                        <td>06</td>
+                    </tr>
+                                        <tr>
+                        <td>21</td>
+                        <td>48 </td>
+                        <td>91</td>
+                        <td>**</td>
+                        <td>80</td>
+                        <td>69</td>
+                    </tr>
+                                        <tr>
+                        <td>81</td>
+                        <td>67 </td>
+                        <td>53</td>
+                        <td>82</td>
+                        <td>03</td>
+                        <td>26</td>
+                    </tr>
+                                        <tr>
+                        <td>98</td>
+                        <td>13 </td>
+                        <td>42</td>
+                        <td>51</td>
+                        <td>97</td>
+                        <td><font color="red">44</font></td>
+                    </tr>
+                                        <tr>
+                        <td>62</td>
+                        <td>68 </td>
+                        <td><font color="red">77</font></td>
+                        <td>64</td>
+                        <td>14</td>
+                        <td>25</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">72</font></td>
+                        <td>23 </td>
+                        <td><font color="red">16</font></td>
+                        <td><font color="red">49</font></td>
+                        <td>15</td>
+                        <td>63</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">00</font></td>
+                        <td><font color="red">22</font> </td>
+                        <td>34</td>
+                        <td><font color="red">27</font></td>
+                        <td><font color="red">66</font></td>
+                        <td>53</td>
+                    </tr>
+                                        <tr>
+                        <td>53</td>
+                        <td>45 </td>
+                        <td>**</td>
+                        <td>21</td>
+                        <td>63</td>
+                        <td>17</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">27</font></td>
+                        <td>30 </td>
+                        <td><font color="red">00</font></td>
+                        <td>57</td>
+                        <td>51</td>
+                        <td>25</td>
+                    </tr>
+                                        <tr>
+                        <td>40</td>
+                        <td>60 </td>
+                        <td>01</td>
+                        <td>75</td>
+                        <td><font color="red">44</font></td>
+                        <td><font color="red">44</font></td>
+                    </tr>
+                                        <tr>
+                        <td>42</td>
+                        <td>96 </td>
+                        <td>24</td>
+                        <td>63</td>
+                        <td>76</td>
+                        <td>90</td>
+                    </tr>
+                                        <tr>
+                        <td>41</td>
+                        <td>08 </td>
+                        <td>93</td>
+                        <td>96</td>
+                        <td>20</td>
+                        <td>62</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">11</font></td>
+                        <td>31 </td>
+                        <td>36</td>
+                        <td>79</td>
+                        <td>07</td>
+                        <td>13</td>
+                    </tr>
+                                        <tr>
+                        <td>10</td>
+                        <td>52 </td>
+                        <td>76</td>
+                        <td>15</td>
+                        <td>74</td>
+                        <td>29</td>
+                    </tr>
+                                        <tr>
+                        <td>10</td>
+                        <td>21 </td>
+                        <td>34</td>
+                        <td>64</td>
+                        <td>07</td>
+                        <td>34</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">72</font></td>
+                        <td>10 </td>
+                        <td><font color="red">05</font></td>
+                        <td>26</td>
+                        <td>16</td>
+                        <td>93</td>
+                    </tr>
+                                        <tr>
+                        <td>30</td>
+                        <td>26 </td>
+                        <td>76</td>
+                        <td>48</td>
+                        <td>82</td>
+                        <td><font color="red">55</font></td>
+                    </tr>
+                                        <tr>
+                        <td>32</td>
+                        <td>62 </td>
+                        <td>64</td>
+                        <td>09</td>
+                        <td>13</td>
+                        <td>19</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">99</font></td>
+                        <td>28 </td>
+                        <td><font color="red">49</font></td>
+                        <td>68</td>
+                        <td>57</td>
+                        <td>09</td>
+                    </tr>
+                                        <tr>
+                        <td>90</td>
+                        <td><font color="red">88</font> </td>
+                        <td>98</td>
+                        <td><font color="red">49</font></td>
+                        <td>67</td>
+                        <td>64</td>
+                    </tr>
+                                        <tr>
+                        <td>93</td>
+                        <td>19 </td>
+                        <td>23</td>
+                        <td>60</td>
+                        <td>85</td>
+                        <td>24</td>
+                    </tr>
+                                        <tr>
+                        <td>62</td>
+                        <td>90 </td>
+                        <td>65</td>
+                        <td>52</td>
+                        <td>34</td>
+                        <td>32</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">33</font></td>
+                        <td>32 </td>
+                        <td>69</td>
+                        <td>29</td>
+                        <td>57</td>
+                        <td>31</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">99</font></td>
+                        <td>82 </td>
+                        <td><font color="red">16</font></td>
+                        <td><font color="red">16</font></td>
+                        <td>42</td>
+                        <td><font color="red">27</font></td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">38</font></td>
+                        <td>56 </td>
+                        <td>59</td>
+                        <td><font color="red">33</font></td>
+                        <td>44</td>
+                        <td>85</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">44</font></td>
+                        <td>85 </td>
+                        <td>85</td>
+                        <td>01</td>
+                        <td><font color="red">38</font></td>
+                        <td>71</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">49</font></td>
+                        <td>07 </td>
+                        <td><font color="red">11</font></td>
+                        <td>53</td>
+                        <td>93</td>
+                        <td>95</td>
+                    </tr>
+                                        <tr>
+                        <td>20</td>
+                        <td>04 </td>
+                        <td><font color="red">99</font></td>
+                        <td>18</td>
+                        <td>45</td>
+                        <td>04</td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">88</font></td>
+                        <td>17 </td>
+                        <td>91</td>
+                        <td>79</td>
+                        <td>10</td>
+                        <td><font color="red">72</font></td>
+                    </tr>
+                                        <tr>
+                        <td>98</td>
+                        <td><font color="red">72</font> </td>
+                        <td>85</td>
+                        <td><font color="red">33</font></td>
+                        <td>19</td>
+                        <td><font color="red">05</font></td>
+                    </tr>
+                                        <tr>
+                        <td>24</td>
+                        <td>** </td>
+                        <td>43</td>
+                        <td><font color="red">11</font></td>
+                        <td><font color="red">44</font></td>
+                        <td>82</td>
+                    </tr>
+                                        <tr>
+                        <td>**</td>
+                        <td>28 </td>
+                        <td>78</td>
+                        <td><font color="red">16</font></td>
+                        <td>47</td>
+                        <td>40</td>
+                    </tr>
+                                        <tr>
+                        <td>42</td>
+                        <td>39 </td>
+                        <td>37</td>
+                        <td>60</td>
+                        <td>36</td>
+                        <td>09</td>
+                    </tr>
+                                        <tr>
+                        <td>19</td>
+                        <td>57 </td>
+                        <td>60</td>
+                        <td>20</td>
+                        <td><font color="red">00</font></td>
+                        <td>84</td>
+                    </tr>
+                                        <tr>
+                        <td>70</td>
+                        <td>26 </td>
+                        <td>51</td>
+                        <td>93</td>
+                        <td>97</td>
+                        <td>78</td>
+                    </tr>
+                                        <tr>
+                        <td>25</td>
+                        <td>89 </td>
+                        <td>97</td>
+                        <td>04</td>
+                        <td>34</td>
+                        <td>43</td>
+                    </tr>
+                                        <tr>
+                        <td>73</td>
+                        <td>15 </td>
+                        <td><font color="red">05</font></td>
+                        <td>39</td>
+                        <td><font color="red">77</font></td>
+                        <td>80</td>
+                    </tr>
+                                        <tr>
+                        <td>32</td>
+                        <td>47 </td>
+                        <td>85</td>
+                        <td>32</td>
+                        <td>43</td>
+                        <td>40</td>
+                    </tr>
+                                        <tr>
+                        <td>15</td>
+                        <td>86 </td>
+                        <td><font color="red">99</font></td>
+                        <td><font color="red">38</font></td>
+                        <td><font color="red">99</font></td>
+                        <td><font color="red">38</font></td>
+                    </tr>
+                                        <tr>
+                        <td>13</td>
+                        <td>84 </td>
+                        <td>06</td>
+                        <td>65</td>
+                        <td>98</td>
+                        <td><font color="red">16</font></td>
+                    </tr>
+                                        <tr>
+                        <td><font color="red">38</font></td>
+                        <td>26 </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+            </table>
+            </div>
+        </div>
+
+        <style>
+            td{
+                padding: 10px;
+                font-size: 20px;
+                font-weight: bold;
+                border: 2px solid black;
+                color: black;
+            }
+            body{
+                background-color: white;
+            }
+        </style>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    </body>
+</html>
